@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Start-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.startintellitrace.synopsis">IIS アプリケーション プールで IntelliTrace の収集を開始します。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para _locID="command.startintellitrace.copyright"></maml:para>
+      </maml:copyright>
+      <command:verb>Start</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.startintellitrace.description">IIS アプリケーション プールに対する IntelliTrace の収集を開始します。このアプリケーション プールに対して作成されるすべてのプロセスについて、IntelliTrace データが収集され、プロセスごとの個別のログ ファイルに記録されます。
+
+対象のアプリケーション プールを実行している ID には、ファイルを作成して OutputPath の場所に書き込むアクセス許可が与えられている必要があります。
+
+PowerShell セッションは、アプリケーション プールのリサイクルを実行するのに十分なアクセス許可で実行される必要があります。既定では、これには管理者権限が必要となります。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Start-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.applicationpool.description">IntelliTrace の収集を有効にする、IIS マネージャーに表示されているアプリケーション プールの名前。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="2">
+          <maml:name>CollectionPlan</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.collectionplan.description">IntelliTrace の収集時に使用する収集計画の名前とパス。パスには相対パスまたは絶対パスを指定できます。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="3">
+          <maml:name>OutputPath</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.output.description">IntelliTrace が収集したデータをログ ファイルに書き込む場所。アプリケーション プールを実行している ID には、指定した場所への読み取り/書き込みアクセス許可が与えられている必要があります。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>MaximumSize</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.maximumsize.description">itrace ファイルの最大サイズ (MB) を指定します。この値は、収集計画で指定された
+            値を置き換えます。サイズを無制限にするには -1 を指定します。</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>NoFragments</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.nofragments.description">CustomEvents ディレクトリにある収集計画フラグメントを含めずに、IntelliTrace の収集を開始します。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.applicationpool.description">IntelliTrace の収集を有効にする、IIS マネージャーに表示されているアプリケーション プールの名前。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="2">
+        <maml:name>CollectionPlan</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.collectionplan.description">IntelliTrace の収集時に使用する収集計画の名前とパス。パスには相対パスまたは絶対パスを指定できます。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="3">
+        <maml:name>OutputPath</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.output.description">IntelliTrace が収集したデータをログ ファイルに書き込む場所。アプリケーション プールを実行している ID には、指定した場所への読み取り/書き込みアクセス許可が与えられている必要があります。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+        <maml:name>MaximumSize</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.maximumsize.description">
+            itrace ファイルの最大サイズ (MB) を指定します。この値は、収集計画で指定された値を置き換えます。サイズを無制限にするには -1 を指定します。
+            itrace のサイズは、メタデータなどの最低限のデータを保持できるサイズにする必要があります。
+          </maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>NoFragments</maml:name>
+        <maml:description>
+          <maml:para _locID="syntax.startintellitrace.nofragments.description">CustomEvents ディレクトリにある収集計画フラグメントを含めずに、IntelliTrace の収集を開始します。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.startintellitrace.alert">Start-IntelliTraceCollection を実行すると、対象のアプリケーション プールがリサイクルされます。新しいプロセスで処理されるすべての要求に対して、IntelliTrace データが収集されます。既存のプロセスによって現在処理中である要求は、IntelliTrace の収集の対象となりません。
+
+ログ ファイルには、次の名前付け規則が使用されます。
+&lt;processname&gt;_&lt;processIdHex&gt;_&lt;date&gt;_&lt;time&gt;.itrace
+
+追加の詳細を表示するには、-verbose スイッチを使用します。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.startintellitrace.example1.title">
+          -------------------------- 例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Start-IntelliTraceCollection "ASP.NET v4.0" c:\temp\collectionplan.xml c:\outputfolder
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.startintellitrace.example1.description">説明
+-----------
+これにより、すべての "ASP.NET v4.0" アプリケーション プールでリサイクルが実行されます。Stop-IntelliTraceCollection が呼び出されるまで、すべての新しいプロセスで IntelliTrace の収集が有効になります。
+
+C:\temp\collectionplan.xml の収集計画を使用して、IntelliTrace の収集の構成方法が定義されます。
+
+すべてのログが C:\outputfolder に書き込まれます。</maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Stop-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-IntelliTraceCollectionStatus</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Stop-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.stopintellitrace.synopsis">IIS アプリケーション プールで IntelliTrace の収集を停止します。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para _locID="command.stopintellitrace.copyright"></maml:para>
+      </maml:copyright>
+      <command:verb>Stop</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.stopintellitrace.description">IIS アプリケーション プールで IntelliTrace の収集を停止します。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Stop-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.applicationpool.description">IntelliTrace の収集を無効にする、IIS マネージャーに表示されているアプリケーション プールの名前。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.applicationpool.description">IntelliTrace の収集を無効にする、IIS マネージャーに表示されているアプリケーション プールの名前。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.stopintellitrace.alert">IntelliTrace の収集を停止すると、対象のアプリケーション プールでリサイクルが実行されます。このコマンドは、最後のアクティブなプロセスで処理中の要求が完了した時点で、完了します。
+
+追加の詳細を表示するには、-verbose スイッチを使用します。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.stopintellitrace.example1.title">
+          -------------------------- 例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Stop-IntelliTraceCollection "ASP.NET v4.0"
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.stopintellitrace.example1.description">説明
+-----------
+このコマンドを実行すると、"ASP.NET v4.0" アプリケーション プールから IntelliTrace の収集が削除されます。リサイクルが呼び出されます。このアプリケーション プールに対する現在のすべてのプロセスが完了した後で、ログを分析に使用できます。</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Checkpoint-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Get-IntelliTraceCollectionStatus
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.getintellitracestatus.synopsis">現在のサーバー上のすべてのアプリケーション プールの状態を取得します。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>IntelliTraceCollectionStatus</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.getintellitracestatus.description">現在のサーバー上のすべてのアプリケーション プールの状態を取得します。現在の IIS サーバー上の各アプリケーション プールが一覧表示されます。各アプリケーションについて、名前、プロセス ID、プロセス開始時間、収集計画のパス、およびログのパスが表示されます。現在実行されているプロセスがないアプリケーション プールでは、IntelliTrace の収集が引き続き構成される場合があります。そのような場合、ProcessId、ProcessStartTime、および OutputPath の値は空白になりますが、CollectionPlanPath には、プロセスの開始時に使用する収集計画を示す値が表示されます。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-IntelliTraceCollectionStatus</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.getintellitracestatus.applicationpool.description">表示するアプリケーション プールの一覧 (省略可能)</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.getintellitracestatus.applicationpool.description">表示するアプリケーション プールの一覧 (省略可能)</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        <dev:type>
+          <maml:name>String []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.getintellitracestatus.alert">ApplicationPool 以外のすべての値が空白であるアプリケーション プールのみが、インストルメント化されません。アプリケーション プールが Web ガーデン (つまり、複数のプロセス) として構成されている場合は、アクティブな各プロセスに対して複数のエントリが表示されます。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.getintellitracestatus.example1.title">
+          -------------------------- 例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceStatus
+        </dev:code>
+        <dev:remarks>
+<maml:para _locID="command.getintellitracestatus.example1.description">説明
+-----------
+サーバー上のすべてのアプリケーション プールおよび関連プロセスに対して、IntelliTrace の収集状態の詳細をプロセス ID と共に表示します。
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 2160
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_00000870_111209_084218.iTrace
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 4560
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_000011d0_111209_084218.iTrace
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 3152
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_00000c50_111209_084218.iTrace
+
+ApplicationPool    : Classic .NET AppPool
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+
+ApplicationPool    : ASP.NET v4.0
+ProcessId          : 4212
+ProcessStartTime   : 12/9/2011 8:41:30 AM
+CollectionPlanPath :
+TracePath          :
+
+ApplicationPool    : ASP.NET v4.0 Classic
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+        </maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title _locID="command.getintellitracestatus.example2.title">
+          -------------------------- 例 2 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceCollectionStatus "ASP.NET v4.0", DefaultAppPool
+        </dev:code>
+        <dev:remarks>
+<maml:para _locID="command.getintellitracestatus.example2.description">説明
+-----------
+対象のアプリケーション プール "ASP.NET v4.0" および "DefaultAppPool" の状態を取得します。
+
+ApplicationPool    : ASP.NET v4.0
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath : C:\Windows\Temp\asp.NET V4.0_collection_plan.asp.net.trace.xml
+TracePath          :
+
+ApplicationPool    : DefaultAppPool
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+          </maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop_IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Checkpoint-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.checkpointintellitracecollection.synopsis">IIS アプリケーション プールに対するアクティブな IntelliTrace ログのスナップショットを作成します。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Checkpoint</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.checkpointintellitracecollection.description">アクティブな IntelliTrace の収集の間、ログ ファイルは実行中のプロセスによってロックされ、コピーまたは開くことはできません。Checkpoint-IntelliTraceCollection コマンドを実行すると、対象のアプリケーション プールに対する現在の IntelliTrace の収集セッションを停止しなくても、ログを分析に使用できるように、現在のログのコピーが作成されます。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Checkpoint-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.applicationpool.description">IntelliTrace の収集が現在有効になっているアプリケーション プールの名前。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2">
+          <maml:name>ProcessId</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.processid.description">この省略可能なパラメーターは、1 つのアプリケーション プールで複数のプロセスが実行されている場合に使用します。1 つのプロセスに対する IntelliTrace データが必要な場合に、プロセス ID の値を指定します。このパラメーターを省略した場合は、対象のアプリケーション プールで実行されている各プロセスに対して、各ログのコピーが作成されます。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">UInt32 []</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.checkpointintellitrace.applicationpool.description">IntelliTrace の収集が現在有効になっているアプリケーション プールの名前。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2">
+        <maml:name>ProcessId</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.checkpointintellitrace.processid.description">この省略可能なパラメーターは、1 つのアプリケーション プールで複数のプロセスが実行されている場合に使用します。1 つのプロセスに対する IntelliTrace データが必要な場合に、プロセス ID の値を指定します。このパラメーターを省略した場合は、対象のアプリケーション プールで実行されている各プロセスに対して、各ログのコピーが作成されます。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">UInt32 []</command:parameterValue>
+        <dev:type>
+          <maml:name>UInt32 []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.confirm.description">コマンドの実行前に確認を求めるメッセージを表示します。</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="syntax.checkpointintellitrace.whatif.description">実際にコマンドを実行することなくコマンドを実行した場合の処理について説明します。</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.checkpointintellitracecollection.alert">このコマンドは、現在の収集セッションを停止することなく、ある時点までに収集されたログを分析する必要がある場合に使用します。これは、IntelliTrace の停止および再起動によってアプリケーション プールをリサイクルせずに、最後に実行されたコード内の特定の IntelliTrace イベントまたは条件をチェックするのに便利です。
+
+アプリケーションが Web ガーデン (1 つのアプリケーション プールに対して複数のプロセスが有効) として定義されている場合は、省略可能な ProcessId パラメーターを使用することで、すべてのプロセスではなく、1 つのプロセスを対象に IntelliTrace の収集を実行できます。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.checkpointintellitracecollection.example1">
+          -------------------------- 例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Checkpoint-IntelliTraceCollection "ASP.NET v4.0"
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.checkpointintellitracecollection.example1.description">説明
+-----------
+現在 "ASP.NET v4.0" アプリケーション プールで実行されているすべてのプロセスに対して、すべてのログのコピーを作成します。</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title _locID="command.checkpointintellitracecollection.example2">
+          -------------------------- 例 2 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Checkpoint-IntelliTraceCollection "ASP.NET v4.0" 1234
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.checkpointintellitracecollection.example2.description">説明
+-----------
+"ASP.NET v4.0" アプリケーション プールで現在実行されている ID 1234 のプロセスに対するログだけのコピーを作成します。</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Get-IntelliTraceFileInfo
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.getfileinfo.synopsis">IntelliTrace (.iTrace) ファイルに関する基本的な情報を取得します。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>IntelliTraceFileInfo</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.getfileinfo.description">次の情報を表示します。
+
+選択したファイルのパス。
+IntelliTrace の収集の対象となったプロセスの名前。
+収集されたプロセスのプロセス ID。
+収集の開始時間と停止時間。
+収集の対象となったアプリケーション プール。
+Checkpoint-IntelliTraceCollection を使用してこのログが作成された場合は、チェックポイント時間。
+収集セッションの継続時間。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-IntelliTraceFileInfo</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.getfileinfo.input.description">対象の .iTrace ファイルのパス。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.getfileinfo.input.description">対象の .iTrace ファイルのパス。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        <dev:type>
+          <maml:name>String []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.getfileinfo.alert">このコマンドは、複数のログ ファイルがあるとき、分析に使用する適切な IntelliTrace ログ ファイルを決定するために、特に便利です。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.getfileinfo.example1.title">
+          -------------------------- 例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceFileInfo C:\intellitrace\logs\w3wp_00001a54_111130_102409.itrace
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.getfileinfo.example1.description">Path        : C:\intellitrace\logs\w3wp_00001a54_111130_102409.itrace
+ProcessName      : c:\windows\system32\inetsrv\w3wp.exe
+ProcessId        : 6740
+ProcessStartTime : 11/30/2011 10:24:09 AM
+ProcessStopTime  : 11/30/2011 10:50:11 AM
+ApplicationPool  : ASP.NET v4.0
+CheckpointTime   :
+TraceDuration    : 00:21:12.9840000
+          </maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Checkpoint-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Start-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.startintellitrace.synopsis">啟動 IIS 應用程式集區上的 IntelliTrace 集合。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para _locID="command.startintellitrace.copyright"></maml:para>
+      </maml:copyright>
+      <command:verb>Start</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.startintellitrace.description">啟動 IIS 應用程式集區上的 IntelliTrace 集合。 針對這個應用程式集區所建立的所有處理序都會將 IntelliTrace 資料收集到每個處理序各自的記錄檔。
+
+執行目標應用程式集區的識別必須具有在 OutputPath 位置建立和寫入檔案的權限。
+
+執行 PowerShell 工作階段的身分必須具有足夠的權限，可以執行應用程式集區回收。 根據預設，這需要系統管理員權限。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Start-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.applicationpool.description">即將啟用 IntelliTrace 集合的應用程式集區名稱 (如 IIS 管理員中所列)。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="2">
+          <maml:name>CollectionPlan</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.collectionplan.description">收集 IntelliTrace 資料期間要使用的收集計畫名稱和路徑。可以是相對路徑或絕對路徑。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="3">
+          <maml:name>OutputPath</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.output.description">IntelliTrace 即將寫入所收集資料的記錄檔位置。執行應用程式集區的識別必須具有指定位置的讀取/寫入權限。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>MaximumSize</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.maximumsize.description">指定 itrace 檔案的大小上限，以 MB 為單位。這個值會取代
+            收集計畫中指定的值。指定 -1 代表大小無限制。</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>NoFragments</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.startintellitrace.nofragments.description">啟動 IntelliTrace 集合，但不包含 CustomEvents 目錄中的收集計畫片段。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.applicationpool.description">即將啟用 IntelliTrace 集合的應用程式集區名稱 (如 IIS 管理員中所列)。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="2">
+        <maml:name>CollectionPlan</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.collectionplan.description">收集 IntelliTrace 資料期間要使用的收集計畫名稱和路徑。可以是相對路徑或絕對路徑。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="3">
+        <maml:name>OutputPath</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.output.description">IntelliTrace 即將寫入所收集資料的記錄檔位置。執行應用程式集區的識別必須具有指定位置的讀取/寫入權限。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+        <maml:name>MaximumSize</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.maximumsize.description">
+            指定 itrace 檔案的大小上限，以 MB 為單位。這個值會取代收集計畫中指定的值。指定 -1 代表大小無限制。
+            itrace 的大小必須足夠容納如中繼資料這類最小量的資料。
+          </maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.startintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>NoFragments</maml:name>
+        <maml:description>
+          <maml:para _locID="syntax.startintellitrace.nofragments.description">啟動 IntelliTrace 集合，但不包含 CustomEvents 目錄中的收集計畫片段。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.startintellitrace.alert">執行 Start-IntelliTraceCollection 時會回收目標應用程式集區。這個命令會針對新處理序處理的所有要求收集 IntelliTrace 資料。目前正由現有處理序處理的任何要求則不會包含在 IntelliTrace 集合中。
+
+記錄檔會使用下列命名慣例: 
+&lt;processname&gt;_&lt;processIdHex&gt;_&lt;date&gt;_&lt;time&gt;.itrace
+
+如需其他詳細資料，請參閱 -verbose 參數。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.startintellitrace.example1.title">
+          -------------------------- 範例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Start-IntelliTraceCollection "ASP.NET v4.0" c:\temp\collectionplan.xml c:\outputfolder
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.startintellitrace.example1.description">描述
+-----------
+這會導致在所有 "ASP.NET v4.0" 應用程式集區上執行回收。所有新處理序都會啟用 IntelliTrace 集合，直到呼叫 Stop-IntelliTraceCollection 為止。
+
+這個命令會使用位於 C:\temp\collectionplan.xml 的收集計畫來定義 IntelliTrace 集合的設定方式。
+
+所有記錄都寫至 C:\outputfolder。</maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Stop-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-IntelliTraceCollectionStatus</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Stop-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.stopintellitrace.synopsis">停止 IIS 應用程式集區上的 IntelliTrace 集合。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para _locID="command.stopintellitrace.copyright"></maml:para>
+      </maml:copyright>
+      <command:verb>Stop</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.stopintellitrace.description">停止 IIS 應用程式集區上的 IntelliTrace 集合。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Stop-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.applicationpool.description">即將停用 IntelliTrace 集合的應用程式集區的名稱 (如 IIS 管理員中所列)。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.stopintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.applicationpool.description">即將停用 IntelliTrace 集合的應用程式集區的名稱 (如 IIS 管理員中所列)。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.stopintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue/>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.stopintellitrace.alert">停止 IntelliTrace 集合會導致目標應用程式集區執行回收。這個命令會在最後一個使用中處理序完成進行中的任何要求後完成。
+
+如需其他詳細資料，請參閱 -verbose 參數。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.stopintellitrace.example1.title">
+          -------------------------- 範例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Stop-IntelliTraceCollection "ASP.NET v4.0"
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.stopintellitrace.example1.description">描述
+-----------
+這個命令會導致從 "ASP.NET v4.0" 應用程式集區移除 IntelliTrace 集合，並呼叫回收。等這個應用程式集區的所有目前處理序完成後，記錄就可供分析使用。</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Checkpoint-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Get-IntelliTraceCollectionStatus
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.getintellitracestatus.synopsis">取得目前伺服器上所有應用程式集區的狀態。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>IntelliTraceCollectionStatus</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.getintellitracestatus.description">取得目前伺服器上所有應用程式集區的狀態。將列出目前 IIS 伺服器上的每個應用程式集區。這個命令會提供每個應用程式集區的名稱、處理序 ID、處理序開始時間、收集計畫路徑和記錄路徑。如果某應用程式集區目前沒有執行中的處理序，該集區仍然可能已設定要收集 IntelliTrace 資料。如有這種狀況，ProcessId、ProcessStartTime 和 OutputPath 將是空白，但 CollectionPlanPath 則有值，指出當處理序開始時要使用的收集計畫。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-IntelliTraceCollectionStatus</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.getintellitracestatus.applicationpool.description">要列示之應用程式集區的選擇性清單</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.getintellitracestatus.applicationpool.description">要列示之應用程式集區的選擇性清單</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        <dev:type>
+          <maml:name>String []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.getintellitracestatus.alert">不檢測的應用程式集區是除了 ApplicationPool 外所有值都空白的應用程式集區。如果應用程式集區已設為網頁處理序區 (即多重處理序)，則將為每個現用處理序列示多個項目。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.getintellitracestatus.example1.title">
+          -------------------------- 範例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceStatus
+        </dev:code>
+        <dev:remarks>
+<maml:para _locID="command.getintellitracestatus.example1.description">描述
+-----------
+列示 IntelliTrace 集合狀態詳細資料，以及伺服器上所有應用程式集區及其相關處理序的處理序 ID。
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 2160
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_00000870_111209_084218.iTrace
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 4560
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_000011d0_111209_084218.iTrace
+
+ApplicationPool    : DefaultAppPool
+ProcessId          : 3152
+ProcessStartTime   : 12/9/2011 8:42:18 AM
+CollectionPlanPath : C:\Windows\Temp\defaultapppool_collection_plan.ASP.NET.trace.xml
+TracePath          : C:\CAB\w3wp_00000c50_111209_084218.iTrace
+
+ApplicationPool    : Classic .NET AppPool
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+
+ApplicationPool    : ASP.NET v4.0
+ProcessId          : 4212
+ProcessStartTime   : 12/9/2011 8:41:30 AM
+CollectionPlanPath :
+TracePath          :
+
+ApplicationPool    : ASP.NET v4.0 Classic
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+        </maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title _locID="command.getintellitracestatus.example2.title">
+          -------------------------- 範例 2 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceCollectionStatus "ASP.NET v4.0", DefaultAppPool
+        </dev:code>
+        <dev:remarks>
+<maml:para _locID="command.getintellitracestatus.example2.description">描述
+-----------
+取得目標應用程式集區 "ASP.NET v4.0" 和 "DefaultAppPool" 的狀態。
+
+ApplicationPool    : ASP.NET v4.0
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath : C:\Windows\Temp\asp.NET V4.0_collection_plan.asp.net.trace.xml
+TracePath          :
+
+ApplicationPool    : DefaultAppPool
+ProcessId          :
+ProcessStartTime   :
+CollectionPlanPath :
+TracePath          :
+          </maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop_IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Checkpoint-IntelliTraceCollection
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.checkpointintellitracecollection.synopsis">建立 IIS 應用程式集區的使用中 IntelliTrace 記錄的快照。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Checkpoint</command:verb>
+      <command:noun>IntelliTraceCollection</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.checkpointintellitracecollection.description">在使用中 IntelliTrace 集合期間，記錄檔會被執行中處理序鎖定，無法複製或開啟。Checkpoint-IntelliTraceCollection 命令會建立目前記錄的複本，以供分析之用，因而不須停止目標應用程式集區的目前 IntelliTrace 集合工作階段。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Checkpoint-IntelliTraceCollection</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>ApplicationPool</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.applicationpool.description">目前已啟用 IntelliTrace 集合的應用程式集區名稱。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2">
+          <maml:name>ProcessId</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.processid.description">這個選擇性參數是用在於單一應用程式集區下執行多個處理序時。如需單一處理序的 IntelliTrace 資料，請包含處理序 ID 值。如果未提供這個參數，將為目標應用程式集區下執行的每個處理序建立一份記錄複本。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">UInt32 []</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+          </maml:description>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+          </maml:description>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>ApplicationPool</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.checkpointintellitrace.applicationpool.description">目前已啟用 IntelliTrace 集合的應用程式集區名稱。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="true (ByPropertyName)" position="2">
+        <maml:name>ProcessId</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.checkpointintellitrace.processid.description">這個選擇性參數是用在於單一應用程式集區下執行多個處理序時。如需單一處理序的 IntelliTrace 資料，請包含處理序 ID 值。如果未提供這個參數，將為目標應用程式集區下執行的每個處理序建立一份記錄複本。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">UInt32 []</command:parameterValue>
+        <dev:type>
+          <maml:name>UInt32 []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+            <maml:para _locID="syntax.checkpointintellitrace.confirm.description">在執行命令之前提示您確認。</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para _locID="syntax.checkpointintellitrace.whatif.description">描述當您執行了命令但未實際執行命令時將會發生的情形。</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.checkpointintellitracecollection.alert">當您想分析已收集到某個時間點的記錄，卻不想停止目前收集工作階段時，可使用這個命令。如果要檢查所執行的最近程式碼中特定的 IntelliTrace 事件或狀況，卻不想停止 IntelliTrace 再重新啟動來回收應用程式集區，這個命令就很有用。
+
+當應用程式集區定義為網頁處理序區 (針對單一應用程式集區啟用多個處理序)，可以使用選擇性的 ProcessId 參數，將 IntelliTrace 集合的目標設為單一處理序，而非所有處理序。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.checkpointintellitracecollection.example1">
+          -------------------------- 範例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Checkpoint-IntelliTraceCollection "ASP.NET v4.0"
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.checkpointintellitracecollection.example1.description">描述
+-----------
+針對目前在 "ASP.NET v4.0" 應用程式集區下執行的所有處理序建立所有記錄的複本</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title _locID="command.checkpointintellitracecollection.example2">
+          -------------------------- 範例 2 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Checkpoint-IntelliTraceCollection "ASP.NET v4.0" 1234
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.checkpointintellitracecollection.example2.description">描述
+-----------
+只針對目前在 "ASP.NET v4.0" 應用程式集區下執行，且 ID 為 1234 的處理序建立記錄的複本。</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Start-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>
+        Get-IntelliTraceFileInfo
+      </command:name>
+      <maml:description>
+        <maml:para _locID="command.getfileinfo.synopsis">取得有關 IntelliTrace (.iTrace) 檔案的基本資訊。</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>IntelliTraceFileInfo</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para _locID="command.getfileinfo.description">顯示下列資訊: 
+
+所選取檔案的路徑。
+IntelliTrace 集合的目標處理序名稱。
+所收集處理序的處理序 ID。
+收集的開始和結束時間。
+收集的目標應用程式集區。
+檢查點時間 (如果這個記錄是使用 Checkpoint-IntelliTraceCollection 建立的)。
+收集工作階段的持續期間。</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-IntelliTraceFileInfo</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para _locID="syntax.getfileinfo.input.description">目標 .iTrace 檔案的路徑。</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para _locID="parameter.getfileinfo.input.description">目標 .iTrace 檔案的路徑。</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">String []</command:parameterValue>
+        <dev:type>
+          <maml:name>String []</maml:name>
+          <maml:uri/>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri/>
+          <maml:description/>
+        </dev:type>
+          <maml:description>
+          <maml:para>
+            <!-- description  -->
+          </maml:para>
+          </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <!-- Error section-->
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- Notes section  -->
+    <maml:alertSet>
+      <maml:title></maml:title>
+      <maml:alert>
+        <maml:para _locID="command.getfileinfo.alert">有多個記錄檔可用時，這個命令特別適合用來決定供分析使用的正確 IntelliTrace 記錄檔。</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title _locID="command.getfileinfo.example1.title">
+          -------------------------- 範例 1 --------------------------
+        </maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>
+          Get-IntelliTraceFileInfo C:\intellitrace\logs\w3wp_00001a54_111130_102409.itrace
+        </dev:code>
+        <dev:remarks>
+          <maml:para _locID="command.getfileinfo.example1.description">Path        : C:\intellitrace\logs\w3wp_00001a54_111130_102409.itrace
+ProcessName      : c:\windows\system32\inetsrv\w3wp.exe
+ProcessId        : 6740
+ProcessStartTime : 11/30/2011 10:24:09 AM
+ProcessStopTime  : 11/30/2011 10:50:11 AM
+ApplicationPool  : ASP.NET v4.0
+CheckpointTime   :
+TraceDuration    : 00:21:12.9840000
+          </maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Checkpoint-IntelliTraceCollection</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

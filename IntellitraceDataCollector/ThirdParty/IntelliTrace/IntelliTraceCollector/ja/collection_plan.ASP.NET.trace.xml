@@ -1,0 +1,2987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CollectionPlan xmlns="urn:schemas-microsoft-com:visualstudio:tracelog"><StartupInfo>
+<LogFileName>
+</LogFileName>
+<LogFileDirectory>
+</LogFileDirectory>
+<MaximumLogFileSize>4000</MaximumLogFileSize>
+</StartupInfo>
+  
+  <CheckpointOptions>
+    <ThreadCheckpoints>
+      <Mode>FixedEventRate</Mode>
+      <StartRate>30000</StartRate>
+    </ThreadCheckpoints>
+    <NotifyPointCheckpoints>
+      <Mode>FixedEventRate</Mode>
+      <StartRate>1000</StartRate>
+    </NotifyPointCheckpoints>
+  </CheckpointOptions>
+  <TraceInstrumentation enabled="true">
+    <Options>PresetFull</Options>
+    <ModuleList isExclusionList="true">
+      <Name>PublicKeyToken:B77A5C561934E089</Name>
+      <Name>PublicKeyToken:B03F5F7F11D50A3A</Name>
+      <Name>PublicKeyToken:31BF3856AD364E35</Name>
+      <Name>PublicKeyToken:89845DCD8080CC91</Name>
+      <Name>PublicKeyToken:71E9BCE111E9429C</Name>
+      <Name>Microsoft.</Name>
+    </ModuleList>
+    <ProcessList isExclusionList="true">
+      <Name>devenv.exe</Name>
+      <Name>mtm.exe</Name>
+      <Name>TestAgentConfigUI.exe</Name>
+      <Name>TestControllerConfigUI.exe</Name>
+      <Name>DW20.exe</Name>
+      <Name>TFSMgmt.exe</Name>
+      <Name>TFSJobAgent.exe</Name>
+      <Name>TFSBuildServiceHost.exe</Name>
+      <Name>Microsoft.VisualStudio.PerfWatson.exe</Name>
+      <Name>FxCopCmd.exe</Name>
+      <Name>MSBuild.exe</Name>
+      <Name>sqlservr.exe</Name>
+      <Name>IntelliTrace.exe</Name>
+      <Name>MSVSMON.exe</Name>
+      <Name>IntelliTraceSC.exe</Name>
+      <Name>xdesproc.exe</Name>
+      <Name>VWDExpress.exe</Name>
+      <Name>VsWinExpress.exe</Name>
+      <Name>Blend.exe</Name>
+      <Name>CodedUITestSwitchFromImmersive.exe</Name>
+    </ProcessList>
+  </TraceInstrumentation>
+  <TelemetryInstrumentation enabled="true">
+    <ProcessList isExclusionList="true">
+</ProcessList>
+  </TelemetryInstrumentation>
+  <DetourInstrumentation enabled="false">
+    <ModuleList isExclusionList="true">
+</ModuleList>
+    <ProcessList isExclusionList="true">
+</ProcessList>
+  </DetourInstrumentation>
+  
+  <DiagnosticEventInstrumentation enabled="true">
+    <ModuleList isExclusionList="true">
+</ModuleList>
+    <ProcessList isExclusionList="true">
+      <Name>devenv.exe</Name>
+      <Name>mtm.exe</Name>
+      <Name>TestAgentConfigUI.exe</Name>
+      <Name>TestControllerConfigUI.exe</Name>
+      <Name>DW20.exe</Name>
+      <Name>TFSMgmt.exe</Name>
+      <Name>TFSJobAgent.exe</Name>
+      <Name>TFSBuildServiceHost.exe</Name>
+      <Name>Microsoft.VisualStudio.PerfWatson.exe</Name>
+      <Name>FxCopCmd.exe</Name>
+      <Name>MSBuild.exe</Name>
+      <Name>sqlservr.exe</Name>
+      <Name>IntelliTrace.exe</Name>
+      <Name>MSVSMON.exe</Name>
+      <Name>IntelliTraceSC.exe</Name>
+      <Name>xdesproc.exe</Name>
+      <Name>VWDExpress.exe</Name>
+      <Name>VsWinExpress.exe</Name>
+      <Name>Blend.exe</Name>
+      <Name>CodedUITestSwitchFromImmersive.exe</Name>
+    </ProcessList>
+  </DiagnosticEventInstrumentation>
+  
+  <WebTrackingInstrumentation enabled="true">
+    <ProcessList isExclusionList="true">
+</ProcessList> 
+  </WebTrackingInstrumentation>
+  <UnitTestIsolationInstrumentation enabled="false">
+    <ProcessList isExclusionList="true">
+</ProcessList> 
+  </UnitTestIsolationInstrumentation>
+  <TracePointProvider>
+    <!-- List of Categories Grouping Events -->
+    <Categories>
+      <Category Id="system.data" _locID="category.SystemData">ADO.NET</Category>
+      <Category Id="system.web" _locID="category.SystemWeb">ASP.NET</Category>
+      <Category Id="console" _locID="category.SystemConsole">コンソール</Category>
+      <Category Id="data.binding" _locID="category.DataBinding">データ バインディング</Category>
+      <Category Id="environment.variables" _locID="category.SystemEnvironment">環境変数</Category>
+      <Category Id="file.access" _locID="category.FileAccess">ファイル</Category>
+      <Category Id="gesture" _locID="category.Gesture">ジェスチャ</Category>
+      <Category Id="lazy" _locID="category.Lazy">遅延初期化</Category>
+      <Category Id="registry.access" _locID="category.RegistryAccess">レジストリ</Category>
+      <Category Id="servicemodel" _locID="category.SystemServiceModel">ServiceModel</Category>
+      <Category Id="threading" _locID="category.Threading">スレッド</Category>
+      <Category Id="tracing" _locID="category.Tracing">トレース</Category>
+      <Category Id="user.prompt" _locID="category.UserPrompt">ユーザー プロンプト</Category>
+      <Category Id="xml" _locID="category.SystemXml">XML</Category>
+    <Category Id="sharepoint.uls" _locID="category.SharePointULS">SharePoint ULS</Category>
+<Category Id="sharepoint.userprofile" _locID="category.SharePointUserProfile">SharePoint User Profile</Category>
+</Categories>
+    <!-- List of Module Specifications -->
+    <ModuleSpecifications>
+      <ModuleSpecification Id="mscorlib">mscorlib.dll</ModuleSpecification>
+      <ModuleSpecification Id="mscorlib2_only" maxVersion="2.0">mscorlib.dll</ModuleSpecification>
+      <ModuleSpecification Id="mscorlib4_plus" minVersion="4.0">mscorlib.dll</ModuleSpecification>
+      <ModuleSpecification Id="mscorlib45_plus" minVersion="4.0.30319.236">mscorlib.dll</ModuleSpecification>
+      <ModuleSpecification Id="mscorlib4_only" minVersion="4.0" maxVersion="4.0.30319.235">mscorlib.dll</ModuleSpecification>
+      <ModuleSpecification Id="presentationframework">PresentationFramework.dll</ModuleSpecification>
+      <ModuleSpecification Id="system">System.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.activities4_plus" minVersion="4.0">System.Activities.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.data">System.Data.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.servicemodel">System.ServiceModel.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.web">System.Web.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.web2_only" maxVersion="2.0">System.Web.dll</ModuleSpecification>
+      <ModuleSpecification Id="winforms">System.Windows.Forms.dll</ModuleSpecification>
+      <ModuleSpecification Id="system.xml">System.Xml.dll</ModuleSpecification>
+    <ModuleSpecification Id="Microsoft.SharePoint" minVersion="14.0.0.0" maxVersion="15">Microsoft.SharePoint.dll</ModuleSpecification>
+<ModuleSpecification Id="Microsoft.Office.Server" minVersion="14.0.0.0" maxVersion="15">Microsoft.Office.Server.dll</ModuleSpecification>
+<ModuleSpecification Id="Microsoft.Office.Server.UserProfiles" minVersion="14.0.0.0" maxVersion="15">Microsoft.Office.Server.UserProfiles.dll</ModuleSpecification>
+</ModuleSpecifications>
+    <!-- List of Diagnostic Events -->
+    <DiagnosticEventSpecifications>
+      <!-- Begin Diagnostic Events for ADO.NET-->
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OdbcCommand.ExecuteReader">ExecuteReader (ODBCCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OdbcCommand.ExecuteReader">コマンド テキストが実行され、CommandBehavior 値の 1 つを使用して OdbcDataReader が構築されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.Odbc.OdbcCommand</TypeName>
+            <MethodName>ExecuteReader</MethodName>
+            <MethodId>System.Data.Odbc.OdbcCommand.ExecuteReader(System.Data.CommandBehavior):System.Data.Odbc.OdbcDataReader</MethodId>
+            <ShortDescription _locID="shortDescription.OdbcCommand.ExecuteReader">リーダー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OdbcCommand.ExecuteReader">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、CommandBehavior 値の 1 つを使用して OdbcDataReader が構築されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OdbcCommand.ExecuteReader.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OdbcCommand.ExecuteReader.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OdbcCommand.ExecuteNonQuery">ExecuteNonQuery (ODBCCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OdbcCommand.ExecuteNonQuery">コマンド テキストが実行され、影響を受ける行数が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.Odbc.OdbcCommand</TypeName>
+            <MethodName>ExecuteNonQuery</MethodName>
+            <MethodId>System.Data.Odbc.OdbcCommand.ExecuteNonQuery():System.Int32</MethodId>
+            <ShortDescription _locID="shortDescription.OdbcCommand.ExecuteNonQuery">NonQuery "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OdbcCommand.ExecuteNonQuery">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、影響を受ける行数が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OdbcCommand.ExecuteNonQuery.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OdbcCommand.ExecuteNonQuery.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OdbcCommand.ExecuteScalar">ExecuteScalar (ODBCCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OdbcCommand.ExecuteScalar">コマンド テキストが実行され、結果セットの最初の行の最初の列が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.Odbc.OdbcCommand</TypeName>
+            <MethodName>ExecuteScalar</MethodName>
+            <MethodId>System.Data.Odbc.OdbcCommand.ExecuteScalar():System.Object</MethodId>
+            <ShortDescription _locID="shortDescription.OdbcCommand.ExecuteScalar">スカラー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OdbcCommand.ExecuteScalar">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、結果セットの最初の行の最初の列が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OdbcCommand.ExecuteScalar.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OdbcCommand.ExecuteScalar.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OleDbCommand.ExecuteReader">ExecuteReader (OLEDBCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OleDbCommand.ExecuteReader">コマンド テキストが実行され、CommandBehavior 値の 1 つを使用して OleDbDataReader が構築されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.OleDb.OleDbCommand</TypeName>
+            <MethodName>ExecuteReader</MethodName>
+            <MethodId>System.Data.OleDb.OleDbCommand.ExecuteReader(System.Data.CommandBehavior):System.Data.OleDb.OleDbDataReader</MethodId>
+            <ShortDescription _locID="shortDescription.OleDbCommand.ExecuteReader">リーダー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OleDbCommand.ExecuteReader">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、CommandBehavior 値の 1 つを使用して OleDbDataReader が構築されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OleDbCommand.ExecuteReader.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OleDbCommand.ExecuteReader.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OleDbCommand.ExecuteNonQuery">ExecuteNonQuery (OLEDBCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OleDbCommand.ExecuteNonQuery">コマンド テキストが実行され、影響を受ける行数が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.OleDb.OleDbCommand</TypeName>
+            <MethodName>ExecuteNonQuery</MethodName>
+            <MethodId>System.Data.OleDb.OleDbCommand.ExecuteNonQuery():System.Int32</MethodId>
+            <ShortDescription _locID="shortDescription.OleDbCommand.ExecuteNonQuery">NonQuery "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OleDbCommand.ExecuteNonQuery">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、影響を受ける行数が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OleDbCommand.ExecuteNonQuery.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OleDbCommand.ExecuteNonQuery.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.OleDbCommand.ExecuteScalar">ExecuteScalar (OLEDBCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.OleDbCommand.ExecuteScalar">コマンド テキストが実行され、結果セットの最初の行の最初の列が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.OleDb.OleDbCommand</TypeName>
+            <MethodName>ExecuteScalar</MethodName>
+            <MethodId>System.Data.OleDb.OleDbCommand.ExecuteScalar():System.Object</MethodId>
+            <ShortDescription _locID="shortDescription.OleDbCommand.ExecuteScalar">スカラー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.OleDbCommand.ExecuteScalar">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、結果セットの最初の行の最初の列が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.OleDbCommand.ExecuteScalar.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.OleDbCommand.ExecuteScalar.ConnectionString" _locAttrData="name" query="_connection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.SqlCommand.ExecuteReader">ExecuteReader (SQLCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.SqlCommand.ExecuteReader">コマンド テキストが実行され、SqlDataReader が構築されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.SqlClient.SqlCommand</TypeName>
+            <MethodName>ExecuteReader</MethodName>
+            <MethodId>System.Data.SqlClient.SqlCommand.ExecuteReader(System.Data.CommandBehavior,System.String):System.Data.SqlClient.SqlDataReader</MethodId>
+            <ShortDescription _locID="shortDescription.SqlCommand.ExecuteReader">リーダー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.SqlCommand.ExecuteReader">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、SqlDataReader が構築されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.SqlCommand.ExecuteReader.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.SqlCommand.ExecuteReader.ConnectionString" _locAttrData="name" query="_activeConnection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.SqlCommand.ExecuteNonQuery">ExecuteNonQuery (SQLCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.SqlCommand.ExecuteNonQuery">コマンド テキストが実行され、影響を受ける行数が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.SqlClient.SqlCommand</TypeName>
+            <MethodName>ExecuteNonQuery</MethodName>
+            <MethodId>System.Data.SqlClient.SqlCommand.ExecuteNonQuery():System.Int32</MethodId>
+            <ShortDescription _locID="shortDescription.SqlCommand.ExecuteNonQuery">NonQuery "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.SqlCommand.ExecuteNonQuery">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、影響を受ける行数が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.SqlCommand.ExecuteNonQuery.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.SqlCommand.ExecuteNonQuery.ConnectionString" _locAttrData="name" query="_activeConnection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.SqlCommand.ExecuteScalar">ExecuteScalar (SQLCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.SqlCommand.ExecuteScalar">コマンド テキストが実行され、結果セットの最初の行の最初の列が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.SqlClient.SqlCommand</TypeName>
+            <MethodName>ExecuteScalar</MethodName>
+            <MethodId>System.Data.SqlClient.SqlCommand.ExecuteScalar():System.Object</MethodId>
+            <ShortDescription _locID="shortDescription.SqlCommand.ExecuteScalar">スカラー "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.SqlCommand.ExecuteScalar">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、結果セットの最初の行の最初の列が返されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.SqlCommand.ExecuteScalar.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.SqlCommand.ExecuteScalar.ConnectionString" _locAttrData="name" query="_activeConnection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.data</CategoryId>
+        <SettingsName _locID="settingsName.SqlCommand.ExecuteXmlReader">ExecuteXmlReader (SQLCommand)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.SqlCommand.ExecuteXmlReader">コマンド テキストが実行され、XmlReader が構築されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.data</ModuleSpecificationId>
+            <TypeName>System.Data.SqlClient.SqlCommand</TypeName>
+            <MethodName>ExecuteXmlReader</MethodName>
+            <MethodId>System.Data.SqlClient.SqlCommand.ExecuteXmlReader():System.Xml.XmlReader</MethodId>
+            <ShortDescription _locID="shortDescription.SqlCommand.ExecuteXmlReader">XmlReader "{0}" の実行</ShortDescription>
+            <LongDescription _locID="longDescription.SqlCommand.ExecuteXmlReader">接続 "{1}" に対してコマンド テキスト "{0}" が実行され、XmlReader が構築されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="4096" type="String" name="コマンド テキスト" _locID="dataquery.SqlCommand.ExecuteXmlReader.CommandText" _locAttrData="name" query="_commandText">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="接続文字列" _locID="dataquery.SqlCommand.ExecuteXmlReader.ConnectionString" _locAttrData="name" query="_activeConnection._userConnectionOptions._usersConnectionString">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for ADO.NET -->
+      <!-- Begin Diagnostic Events for ASP.NET -->
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.ErrorFormatter.GetHtmlErrorMessage.return">エラー ページ</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ErrorFormatter.GetHtmlErrorMessage.return">クライアントにエラー ページが返されました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.ErrorFormatter</TypeName>
+            <MethodName>GetHtmlErrorMessage</MethodName>
+            <MethodId>System.Web.ErrorFormatter.GetHtmlErrorMessage(System.Boolean):System.String</MethodId>
+            <ShortDescription _locID="shortDescription.ErrorFormatter.GetHtmlErrorMessage.return">エラー ページ</ShortDescription>
+            <LongDescription _locID="longDescription.ErrorFormatter.GetHtmlErrorMessage.return">HTML エラーが発生しました。エラー ページを表示するには、自動変数ウィンドウの HTML ビジュアライザーを使用します。例外が原因でエラーが発生した場合は、[IntelliTrace] ウィンドウでこのイベントの前に例外があります。</LongDescription>
+            <DataQueries>
+              <DataQuery index="-1" maxSize="32000" type="String" name="ErrorMessage" _locID="dataquery.ErrorFormatter.GetHtmlErrorMessage.return.ErrorMessage" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest">プロセス要求 (ASP.NET 開発サーバー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest">HTTP ハンドラーへの非同期呼び出しが初期化されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.HttpApplication</TypeName>
+            <MethodName>System.Web.IHttpAsyncHandler.BeginProcessRequest</MethodName>
+            <MethodId>System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object):System.IAsyncResult</MethodId>
+            <ShortDescription _locID="shortDescription.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest">{0} "{1}"</ShortDescription>
+            <LongDescription _locID="longDescription.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest">HTTP ハンドラーへの非同期呼び出しが初期化されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="HTTP 要求メソッド" _locID="dataquery.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest.RequestHTTPMethod" _locAttrData="name" query="_request._httpMethod">
+</DataQuery>
+              <DataQuery index="1" maxSize="256" type="String" name="要求ファイル パス" _locID="dataquery.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest.Requestfilepath" _locAttrData="name" query="_request._clientFilePath._virtualPath">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.HttpApplication.AssignContext">プロセス要求 (IIS)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.HttpApplication.AssignContext">HTTP ハンドラーへの非同期呼び出しが初期化されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.HttpApplication</TypeName>
+            <MethodName>AssignContext</MethodName>
+            <MethodId>System.Web.HttpApplication.AssignContext(System.Web.HttpContext):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.HttpApplication.AssignContext">{0} "{1}"</ShortDescription>
+            <LongDescription _locID="longDescription.HttpApplication.AssignContext">HTTP ハンドラーへの非同期呼び出しが初期化されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="HTTP 要求メソッド" _locID="dataquery.HttpApplication.AssignContext.RequestHTTPMethod" _locAttrData="name" query="_request._httpMethod">
+</DataQuery>
+              <DataQuery index="1" maxSize="256" type="String" name="要求ファイル パス" _locID="dataquery.HttpApplication.AssignContext.Requestfilepath" _locAttrData="name" query="_request._clientFilePath._virtualPath">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.Page.RaisePostBackEvent">ページのポストバック イベント</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Page.RaisePostBackEvent">ASP.NET ページに対してポストバック イベントが発生しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.Page</TypeName>
+            <MethodName>RaisePostBackEvent</MethodName>
+            <MethodId>System.Web.UI.Page.RaisePostBackEvent(System.Collections.Specialized.NameValueCollection):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.Page.OnPostBackDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.HttpResponse.Redirect">リダイレクト</SettingsName>
+        <SettingsDescription _locID="settingsDescription.HttpResponse.Redirect">新しい URL へのリダイレクト。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web2_only</ModuleSpecificationId>
+            <TypeName>System.Web.HttpResponse</TypeName>
+            <MethodName>Redirect</MethodName>
+            <MethodId>System.Web.HttpResponse.Redirect(System.String,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.HttpResponse.Redirect.1">"{0}" へのリダイレクト</ShortDescription>
+            <LongDescription _locID="longDescription.HttpResponse.Redirect.1">新しい URL "{0}" へのリダイレクト。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.HttpResponse.Redirect.1.url" _locAttrData="name" name="url" query="">
+</DataQuery>
+              <DataQuery index="2" maxSize="0" type="Boolean" _locID="dataquery.HttpResponse.Redirect.1.endResponse" _locAttrData="name" name="endResponse" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.HttpResponse</TypeName>
+            <MethodName>Redirect</MethodName>
+            <MethodId>System.Web.HttpResponse.Redirect(System.String,System.Boolean,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.HttpResponse.Redirect.2">"{0}" へのリダイレクト</ShortDescription>
+            <LongDescription _locID="longDescription.HttpResponse.Redirect.2">新しい URL "{0}" へのリダイレクト。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.HttpResponse.Redirect.2.url" _locAttrData="name" name="url" query="">
+</DataQuery>
+              <DataQuery index="2" maxSize="0" type="Boolean" _locID="dataquery.HttpResponse.Redirect.2.endResponse" _locAttrData="name" name="endResponse" query="">
+</DataQuery>
+              <DataQuery index="3" maxSize="0" type="Boolean" _locID="dataquery.HttpResponse.Redirect.2.permanent" _locAttrData="name" name="permanent" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>system.web</CategoryId>
+        <SettingsName _locID="settingsName.Page.OnSaveStateComplete">ページの保存状態が完了しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Page.OnSaveStateComplete">ASP.NET ページのページ状態が保存されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.Page</TypeName>
+            <MethodName>OnSaveStateComplete</MethodName>
+            <MethodId>System.Web.UI.Page.OnSaveStateComplete(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.Page.OnSaveStateCompleteDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for ASP.NET -->
+      <!-- Begin Diagnostic Events for Console Output-->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Boolean">WriteLine (Boolean)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Boolean">Boolean が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Boolean">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Boolean">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Boolean" _locID="dataquery.WriteLine.Boolean" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Char">WriteLine (Char)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Char">Char が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Char):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Char">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Char">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Char" _locID="dataquery.WriteLine.Char" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.CharArr">WriteLine (Char[])</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.CharArr">Char[] が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Char[]):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineCharArrayDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.SubCharArr">WriteLine (Char[], int, int)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.SubCharArr">Char[]、インデックス、および数が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Char[],System.Int32,System.Int32):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineSubCharArrayDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Double">WriteLine (Double)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Double">Double が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Double):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Double">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Double">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Double" _locID="dataquery.WriteLine.Double" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Decimal">WriteLine (Decimal)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Decimal">Decimal が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Decimal):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Int32">WriteLine (Int32)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Int32">Int32 が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Int32):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Int32">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Int32">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Int32" _locID="dataquery.WriteLine.Int32" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Int64">WriteLine (Int64)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Int64">Int64 が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Int64):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Int64">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Int64">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Int64" _locID="dataquery.WriteLine.Int64" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Object">WriteLine (Object)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Object">Object が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.Single">WriteLine (Single)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.Single">Single が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.Single):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.Single">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.Single">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="Single" _locID="dataquery.WriteLine.Single" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.UInt32">WriteLine (UInt32)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.UInt32">UInt32 が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.UInt32):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.UInt32">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.UInt32">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="UInt32" _locID="dataquery.WriteLine.UInt32" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine.UInt64">WriteLine (UInt64)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine.UInt64">UInt64 が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.UInt64):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.UInt64">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine.UInt64">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="0" type="UInt64" _locID="dataquery.WriteLine.UInt64" _locAttrData="name" name="value" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine">WriteLine (0 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine">String が渡されたコンソール出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Console.WriteLine.String">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.Console.WriteLine">コンソール出力 "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" name="value" _locID="dataquery.WriteLine.value" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine1">WriteLine (1 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine1">書式指定文字列が渡されたコンソール出力 (1 つの引数)。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String,System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine2">WriteLine (2 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine2">書式指定文字列が渡されたコンソール出力 (2 つの引数)。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String,System.Object,System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine3">WriteLine (3 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine3">書式指定文字列が渡されたコンソール出力 (3 つの引数)。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String,System.Object,System.Object,System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLine4">WriteLine (4 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLine4">書式指定文字列が渡されたコンソール出力 (4 つの引数)。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String,System.Object,System.Object,System.Object,System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>console</CategoryId>
+        <SettingsName _locID="settingsName.Console.WriteLineN">WriteLine (N 個の引数)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Console.WriteLineN">書式指定文字列が渡されたコンソール出力 (引数配列)。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Console</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Console.WriteLine(System.String,System.Object[]):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Console.Output.WriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Console Output -->
+      <!-- Begin Diagnostic Events for Data Binding -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>data.binding</CategoryId>
+        <SettingsName _locID="settingsName.Binding.OnBindingComplete">データ バインディングの完了</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Binding.OnBindingComplete">プロパティにバインドしています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.Binding</TypeName>
+            <MethodName>OnBindingComplete</MethodName>
+            <MethodId>System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.Binding.OnBindingComplete">プロパティ "{0}" 完了 (失敗="{1}")</ShortDescription>
+            <LongDescription _locID="longDescription.Binding.OnBindingComplete">プロパティ "{0}" の OnBindingComplete。呼び出しに失敗したのは {1} です。エラー テキストは "{2}" でした。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" type="String" name="propertyName" maxSize="256" _locID="dataquery.Binding.OnBindingComplete.propertyName" _locAttrData="name" query="propertyName">
+</DataQuery>
+              <DataQuery index="1" type="Boolean" name="cancel" _locID="dataquery.Binding.OnBindingComplete.cancel" _locAttrData="name" query="cancel">
+</DataQuery>
+              <DataQuery index="1" type="String" name="errorText" maxSize="256" _locID="dataquery.Binding.OnBindingComplete.errorText" _locAttrData="name" query="errorText">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Data Binding -->
+      <!-- Begin Diagnostic Events for Environment Variables-->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>environment.variables</CategoryId>
+        <SettingsName _locID="settingsName.Environment.GetEnvironmentVariable">環境変数を取得しています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Environment.GetEnvironmentVariable">GetEnvironmentVariable が呼び出されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Environment</TypeName>
+            <MethodName>GetEnvironmentVariable</MethodName>
+            <MethodId>System.Environment.GetEnvironmentVariable(System.String):System.String</MethodId>
+            <ShortDescription _locID="shortDescription.Environment.GetEnvironmentVariable">"{0}" を取得しています</ShortDescription>
+            <LongDescription _locID="longDescription.Environment.GetEnvironmentVariable">環境変数 "{0}" の値を取得しています。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.Environment.GetEnvironmentVariable.variable" _locAttrData="name" name="variable" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>environment.variables</CategoryId>
+        <SettingsName _locID="settingsName.Environment.GetEnvironmentVariable.return">環境変数を評価しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Environment.GetEnvironmentVariable.return">GetEnvironmentVariable が返されました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Environment</TypeName>
+            <MethodName>GetEnvironmentVariable</MethodName>
+            <MethodId>System.Environment.GetEnvironmentVariable(System.String):System.String</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.EnvironmentVariables.GetEnvironmentVariableDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Environment Variables -->
+      <!-- Begin Diagnostic Events for File -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>file.access</CategoryId>
+        <SettingsName _locID="settingsName.FileStream.Init">アクセス</SettingsName>
+        <SettingsDescription _locID="settingsDescription.FileStream.Init">パスへの FileStream を初期化しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib45_plus</ModuleSpecificationId>
+            <TypeName>System.IO.FileStream</TypeName>
+            <MethodName>Init</MethodName>
+            <MethodId>System.IO.FileStream.Init(System.String,System.IO.FileMode,System.IO.FileAccess,System.Int32,System.Boolean,System.IO.FileShare,System.Int32,System.IO.FileOptions,Microsoft.Win32.Win32Native+SECURITY_ATTRIBUTES,System.String,System.Boolean,System.Boolean,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.FileStream.Init.3">[fp:'{0}'] にアクセスします</ShortDescription>
+            <LongDescription _locID="longDescription.FileStream.Init.3">パス [fp:'{0}'] への FileStream を初期化しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="path" _locID="dataquery.FileStream.Init.3.path" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+          <Binding>
+            <ModuleSpecificationId>mscorlib4_only</ModuleSpecificationId>
+            <TypeName>System.IO.FileStream</TypeName>
+            <MethodName>Init</MethodName>
+            <MethodId>System.IO.FileStream.Init(System.String,System.IO.FileMode,System.IO.FileAccess,System.Int32,System.Boolean,System.IO.FileShare,System.Int32,System.IO.FileOptions,Microsoft.Win32.Win32Native+SECURITY_ATTRIBUTES,System.String,System.Boolean,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.FileStream.Init.1">[fp:'{0}'] にアクセスします</ShortDescription>
+            <LongDescription _locID="longDescription.FileStream.Init.1">パス [fp:'{0}'] への FileStream を初期化しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="path" _locID="dataquery.FileStream.Init.1.path" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+          <Binding>
+            <ModuleSpecificationId>mscorlib2_only</ModuleSpecificationId>
+            <TypeName>System.IO.FileStream</TypeName>
+            <MethodName>Init</MethodName>
+            <MethodId>System.IO.FileStream.Init(System.String,System.IO.FileMode,System.IO.FileAccess,System.Int32,System.Boolean,System.IO.FileShare,System.Int32,System.IO.FileOptions,Microsoft.Win32.Win32Native+SECURITY_ATTRIBUTES,System.String,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.FileStream.Init.2">[fp:'{0}'] にアクセスしました</ShortDescription>
+            <LongDescription _locID="longDescription.FileStream.Init.2">パス [fp:'{0}'] への FileStream を初期化しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="path" _locID="dataquery.FileStream.Init.2.path" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>file.access</CategoryId>
+        <SettingsName _locID="settingsName.FileStream.Dispose">閉じる</SettingsName>
+        <SettingsDescription _locID="settingsDescription.FileStream.Dispose">パスにアクセスしている FileStream を閉じました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.IO.FileStream</TypeName>
+            <MethodName>Dispose</MethodName>
+            <MethodId>System.IO.FileStream.Dispose(System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.FileStream.Dispose">[fp:'{0}'] を閉じる</ShortDescription>
+            <LongDescription _locID="longDescription.FileStream.Dispose">パス [fp:'{0}'] にアクセスしている FileStream を閉じました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" name="fileName" _locID="dataquery.FileStream.Dispose.fileName" _locAttrData="name" query="_fileName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>file.access</CategoryId>
+        <SettingsName _locID="settingsName.File.Delete">削除</SettingsName>
+        <SettingsDescription _locID="settingsDescription.File.Delete">パスで指定されたファイルを削除しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.IO.File</TypeName>
+            <MethodName>Delete</MethodName>
+            <MethodId>System.IO.File.Delete(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.File.Delete">[fp:'{0}'] の削除</ShortDescription>
+            <LongDescription _locID="longDescription.File.Delete">パス [fp:'{0}'] にあるファイルを削除しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.File.Delete.path" _locAttrData="name" name="path" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for File -->
+      <!-- Begin Diagnostic Events for Gestures: Web Forms -->
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.Button.OnClick">Web Forms: Button がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.Button.OnClick">ASP.NET Web ページの Button がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.Button</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Web.UI.WebControls.Button.OnClick(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.Button.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.CheckBox.OnCheckedChanged">Web Forms: CheckBox がオンにされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.CheckBox.OnCheckedChanged">ASP.NET Web ページの CheckBox がオンになりました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.CheckBox</TypeName>
+            <MethodName>OnCheckedChanged</MethodName>
+            <MethodId>System.Web.UI.WebControls.CheckBox.OnCheckedChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.CheckBox.OnCheckedChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.GridView.OnRowCommand">Web Forms: GridView 行コマンド</SettingsName>
+        <SettingsDescription _locID="settingsDescription.GridView.OnRowCommand">GridView コントロールの Button がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.GridView</TypeName>
+            <MethodName>OnRowCommand</MethodName>
+            <MethodId>System.Web.UI.WebControls.GridView.OnRowCommand(System.Web.UI.WebControls.GridViewCommandEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.GridView.OnRowCommandDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.ImageButton.OnClick">Web Forms: ImageButton がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.ImageButton.OnClick">ASP.NET Web ページの ImageButton がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.ImageButton</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Web.UI.WebControls.ImageButton.OnClick(System.Web.UI.ImageClickEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.ImageButton.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.LinkButton.OnClick">Web Forms: LinkButton がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.LinkButton.OnClick">ASP.NET Web ページの LinkButton がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.LinkButton</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.LinkButton.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.ListControl.OnSelectedIndexChanged">Web Forms: ListControl の選択が変更されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.ListControl.OnSelectedIndexChanged">ASP.NET ページの ListControl の選択が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.ListControl</TypeName>
+            <MethodName>OnSelectedIndexChanged</MethodName>
+            <MethodId>System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.ListControl.OnSelectedIndexChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.WebControls.Menu.OnMenuItemClick">Web Forms: MenuItem がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.WebControls.Menu.OnMenuItemClick">ASP.NET Web ページの MenuItem がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.web</ModuleSpecificationId>
+            <TypeName>System.Web.UI.WebControls.Menu</TypeName>
+            <MethodName>OnMenuItemClick</MethodName>
+            <MethodId>System.Web.UI.WebControls.Menu.OnMenuItemClick(System.Web.UI.WebControls.MenuEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Webforms.Menu.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Gestures: Web Forms -->
+      <!-- Begin Diagnostic Events for Gestures: Windows Forms -->
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Button.OnClick">Windows Forms: Button がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Button.OnClick">Windows フォーム アプリケーションの Button がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.Button</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Windows.Forms.Button.OnClick(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Button.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Control.add_Click">Windows Forms: Button がクリックされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Control.add_Click">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.Control</TypeName>
+            <MethodName>add_Click</MethodName>
+            <MethodId>System.Windows.Forms.Control.add_Click(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.CheckBox.OnCheckStateChanged">Windows Forms: CheckBox がオンにされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.CheckBox.OnCheckStateChanged">Windows フォーム アプリケーションの CheckBox がオンになりました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.CheckBox</TypeName>
+            <MethodName>OnCheckStateChanged</MethodName>
+            <MethodId>System.Windows.Forms.CheckBox.OnCheckStateChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.CheckBox.OnCheckStateChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.CheckBox.add_CheckedChanged">Windows Forms: CheckBox がオンにされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.CheckBox.add_CheckedChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.CheckBox</TypeName>
+            <MethodName>add_CheckedChanged</MethodName>
+            <MethodId>System.Windows.Forms.CheckBox.add_CheckedChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.CheckedListBox.OnItemCheck">Windows Forms: CheckedListItem がチェックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.CheckedListBox.OnItemCheck">Windows フォーム アプリケーションの CheckedListItem がチェックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.CheckedListBox</TypeName>
+            <MethodName>OnItemCheck</MethodName>
+            <MethodId>System.Windows.Forms.CheckedListBox.OnItemCheck(System.Windows.Forms.ItemCheckEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.CheckedListBox.OnItemCheckDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.CheckedListBox.add_ItemCheck">Windows Forms: CheckedListItem がチェックされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.CheckedListBox.add_ItemCheck">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.CheckedListBox</TypeName>
+            <MethodName>add_ItemCheck</MethodName>
+            <MethodId>System.Windows.Forms.CheckedListBox.add_ItemCheck(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ComboBox.OnDropDown">Windows Forms: ComboBox がドロップダウンされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ComboBox.OnDropDown">Windows フォーム アプリケーションの ComboBox がドロップダウンされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ComboBox</TypeName>
+            <MethodName>OnDropDown</MethodName>
+            <MethodId>System.Windows.Forms.ComboBox.OnDropDown(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.ComboBox.OnDropDownDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ComboBox.add_DropDown">Windows Forms: ComboBox がドロップダウンされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ComboBox.add_DropDown">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ComboBox</TypeName>
+            <MethodName>add_DropDown</MethodName>
+            <MethodId>System.Windows.Forms.ComboBox.add_DropDown(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.DateTimePicker.OnDropDown">Windows Forms: DateTimePicker がドロップダウンされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DateTimePicker.OnDropDown">Windows フォーム アプリケーションの DateTimePicker がドロップダウンされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.DateTimePicker</TypeName>
+            <MethodName>OnDropDown</MethodName>
+            <MethodId>System.Windows.Forms.DateTimePicker.OnDropDown(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.DateTimePicker.OnDropDownDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.DateTimePicker.add_DropDown">Windows Forms: DateTimePicker がドロップダウンされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DateTimePicker.add_DropDown">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.DateTimePicker</TypeName>
+            <MethodName>add_DropDown</MethodName>
+            <MethodId>System.Windows.Forms.DateTimePicker.add_DropDown(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.DateTimePicker.OnValueChanged">Windows Forms: DateTimePicker 値が変更されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DateTimePicker.OnValueChanged">Windows フォーム アプリケーションの DateTimePicker の値が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.DateTimePicker</TypeName>
+            <MethodName>OnValueChanged</MethodName>
+            <MethodId>System.Windows.Forms.DateTimePicker.OnValueChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.DateTimePicker.OnValueChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.DateTimePicker.add_ValueChanged">Windows Forms: DateTimePicker 値が変更されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DateTimePicker.add_ValueChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.DateTimePicker</TypeName>
+            <MethodName>add_ValueChanged</MethodName>
+            <MethodId>System.Windows.Forms.DateTimePicker.add_ValueChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.LinkLabel.OnLinkClicked">Windows Forms: Link がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.LinkLabel.OnLinkClicked">Windows フォーム アプリケーションの LinkLabel がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.LinkLabel</TypeName>
+            <MethodName>OnLinkClicked</MethodName>
+            <MethodId>System.Windows.Forms.LinkLabel.OnLinkClicked(System.Windows.Forms.LinkLabelLinkClickedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.LinkLabel.OnLinkClickedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.LinkLabel.add_LinkClicked">Windows Forms: Link がクリックされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.LinkLabel.add_LinkClicked">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.LinkLabel</TypeName>
+            <MethodName>add_LinkClicked</MethodName>
+            <MethodId>System.Windows.Forms.LinkLabel.add_LinkClicked(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ListView.OnItemSelectionChanged">Windows Forms: ListViewItem が選択されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ListView.OnItemSelectionChanged">Windows フォーム アプリケーションの ListView の選択が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ListView</TypeName>
+            <MethodName>OnItemSelectionChanged</MethodName>
+            <MethodId>System.Windows.Forms.ListView.OnItemSelectionChanged(System.Windows.Forms.ListViewItemSelectionChangedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.ListView.OnItemSelectionChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ListView.add_ItemSelectionChanged">Windows Forms: ListViewItem が選択されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ListView.add_ItemSelectionChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ListView</TypeName>
+            <MethodName>add_ItemSelectionChanged</MethodName>
+            <MethodId>System.Windows.Forms.ListView.add_ItemSelectionChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.MonthCalendar.OnDateChanged">Windows Forms: MonthCalendar の日付が変更されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MonthCalendar.OnDateChanged">Windows フォーム アプリケーションの MonthCalendar の日付が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.MonthCalendar</TypeName>
+            <MethodName>OnDateChanged</MethodName>
+            <MethodId>System.Windows.Forms.MonthCalendar.OnDateChanged(System.Windows.Forms.DateRangeEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.MonthCalendar.OnDateChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.MonthCalendar.add_DateChanged">Windows Forms: MonthCalendar の日付が変更されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MonthCalendar.add_DateChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.MonthCalendar</TypeName>
+            <MethodName>add_DateChanged</MethodName>
+            <MethodId>System.Windows.Forms.MonthCalendar.add_DateChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.NumericUpDown.OnValueChanged">Windows Forms: NumericUpDown 値が変更されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.NumericUpDown.OnValueChanged">Windows フォーム アプリケーションの NumericUpDown の値が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.NumericUpDown</TypeName>
+            <MethodName>OnValueChanged</MethodName>
+            <MethodId>System.Windows.Forms.NumericUpDown.OnValueChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.NumericUpDown.OnValueChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.NumericUpDown.add_ValueChanged">Windows Forms: NumericUpDown 値が変更されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.NumericUpDown.add_ValueChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.NumericUpDown</TypeName>
+            <MethodName>add_ValueChanged</MethodName>
+            <MethodId>System.Windows.Forms.NumericUpDown.add_ValueChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.RadioButton.OnCheckedChanged">Windows Forms: RadioButton がオンにされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RadioButton.OnCheckedChanged">Windows フォーム アプリケーションの RadioButton がオンになりました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.RadioButton</TypeName>
+            <MethodName>OnCheckedChanged</MethodName>
+            <MethodId>System.Windows.Forms.RadioButton.OnCheckedChanged(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.RadioButton.OnCheckedChangedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.RadioButton.add_CheckedChanged">Windows Forms: RadioButton がオンにされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RadioButton.add_CheckedChanged">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.RadioButton</TypeName>
+            <MethodName>add_CheckedChanged</MethodName>
+            <MethodId>System.Windows.Forms.RadioButton.add_CheckedChanged(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ToolStripMenuItem.OnClick">Windows Forms: ToolStripMenuItem がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ToolStripMenuItem.OnClick">Windows フォーム アプリケーションの ToolStripMenuItem がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ToolStripMenuItem</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Windows.Forms.ToolStripMenuItem.OnClick(System.EventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.ToolStripMenuItem.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ToolStripItem.add_Click">Windows Forms: ToolStripMenuItem がクリックされました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ToolStripItem.add_Click">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.ToolStripItem</TypeName>
+            <MethodName>add_Click</MethodName>
+            <MethodId>System.Windows.Forms.ToolStripItem.add_Click(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.OnBeforeCollapse">Windows Forms: TreeView が折りたたまれました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.OnBeforeCollapse">Windows フォーム アプリケーションの TreeView が折りたたまれました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>OnBeforeCollapse</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.OnBeforeCollapse(System.Windows.Forms.TreeViewCancelEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.TreeView.OnBeforeCollapseDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.add_BeforeCollapse">Windows Forms: TreeView が折りたたまれました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.add_BeforeCollapse">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>add_BeforeCollapse</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.add_BeforeCollapse(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.OnBeforeExpand">Windows Forms: TreeView が展開されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.OnBeforeExpand">Windows フォーム アプリケーションの TreeView が展開されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>OnBeforeExpand</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.OnBeforeExpand(System.Windows.Forms.TreeViewCancelEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.TreeView.OnBeforeExpandDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.add_BeforeExpand">Windows Forms: TreeView が展開されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.add_BeforeExpand">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>add_BeforeExpand</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.add_BeforeExpand(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.OnBeforeSelect">Windows Forms: TreeViewItem が選択されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.OnBeforeSelect">Windows フォーム アプリケーションの TreeView の選択が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>OnBeforeSelect</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.OnBeforeSelect(System.Windows.Forms.TreeViewCancelEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.TreeView.OnBeforeSelectDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeView.add_BeforeSelect">Windows Forms: TreeViewItem が選択されました (ユーザー ハンドラー)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeView.add_BeforeSelect">基本診断イベントの命令ポインターをユーザーのイベント ハンドラーにマップします。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.TreeView</TypeName>
+            <MethodName>add_BeforeSelect</MethodName>
+            <MethodId>System.Windows.Forms.TreeView.add_BeforeSelect(System.EventHandler):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.Control.GatherEventHandlerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Gestures: Windows Forms -->
+      <!-- Begin Diagnostic Events for Gestures: WPF -->
+      <DiagnosticEventSpecification>
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Button.OnClick.2">WPF: Button がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Button.OnClick.2">WPF アプリケーションの Button がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.Button</TypeName>
+            <MethodName>OnClick</MethodName>
+            <MethodId>System.Windows.Controls.Button.OnClick():System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.ButtonBase.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Expander.OnCollapsed">WPF: Expander が折りたたまれました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Expander.OnCollapsed">WPF アプリケーションの Expander が折りたたまれました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.Expander</TypeName>
+            <MethodName>OnCollapsed</MethodName>
+            <MethodId>System.Windows.Controls.Expander.OnCollapsed():System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.Expander.OnCollapsedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Expander.OnExpanded">WPF: Expander が展開されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Expander.OnExpanded">WPF アプリケーションの Expander が展開されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.Expander</TypeName>
+            <MethodName>OnExpanded</MethodName>
+            <MethodId>System.Windows.Controls.Expander.OnExpanded():System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.Expander.OnExpandedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.MenuItem.OnClickImpl">WPF: MenuItem がクリックされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MenuItem.OnClickImpl">WPF アプリケーションの MenuItem がクリックされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.MenuItem</TypeName>
+            <MethodName>OnClickImpl</MethodName>
+            <MethodId>System.Windows.Controls.MenuItem.OnClickImpl(System.Boolean):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.MenuItem.OnClickDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.RadioButton.OnChecked">WPF: RadioButton がオンにされました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RadioButton.OnChecked">WPF アプリケーションの RadioButton がオンにされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.RadioButton</TypeName>
+            <MethodName>OnChecked</MethodName>
+            <MethodId>System.Windows.Controls.RadioButton.OnChecked(System.Windows.RoutedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.RadioButton.OnCheckedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.Selector.InvokeSelectionChanged">WPF: アイテムが選択されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Selector.InvokeSelectionChanged">WPF アプリケーションの Selection の選択が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.Primitives.Selector</TypeName>
+            <MethodName>InvokeSelectionChanged</MethodName>
+            <MethodId>System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(System.Collections.Generic.List`1&lt;System.Object&gt;,System.Collections.Generic.List`1&lt;System.Object&gt;):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.Selector.OnSelectedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.ToggleButton.OnToggle">WPF: コントロールが切り替えられました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ToggleButton.OnToggle">WPF アプリケーションの ToggleButton が切り替えられました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.Primitives.ToggleButton</TypeName>
+            <MethodName>OnToggle</MethodName>
+            <MethodId>System.Windows.Controls.Primitives.ToggleButton.OnToggle():System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.ToggleButton.OnToggleDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeViewItem.OnCollapsed">WPF: TreeViewItem が折りたたまれました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeViewItem.OnCollapsed">WPF アプリケーションの TreeViewItem が折りたたまれました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.TreeViewItem</TypeName>
+            <MethodName>OnCollapsed</MethodName>
+            <MethodId>System.Windows.Controls.TreeViewItem.OnCollapsed(System.Windows.RoutedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.TreeViewItem.OnCollapsedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeViewItem.OnExpanded">WPF: TreeViewItem が展開されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeViewItem.OnExpanded">WPF アプリケーションの TreeViewItem が展開されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.TreeViewItem</TypeName>
+            <MethodName>OnExpanded</MethodName>
+            <MethodId>System.Windows.Controls.TreeViewItem.OnExpanded(System.Windows.RoutedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.TreeViewItem.OnExpandedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>gesture</CategoryId>
+        <SettingsName _locID="settingsName.TreeViewItem.OnSelected">WPF: TreeViewItem が選択されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TreeViewItem.OnSelected">WPF アプリケーションの TreeViewItem の選択が変更されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.Controls.TreeViewItem</TypeName>
+            <MethodName>OnSelected</MethodName>
+            <MethodId>System.Windows.Controls.TreeViewItem.OnSelected(System.Windows.RoutedEventArgs):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.TreeViewItem.OnSelectedDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Gestures: WPF -->
+      <!-- Begin Diagnostic Events for Lazy Initialization -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>lazy</CategoryId>
+        <SettingsName _locID="settingsName.Lazy`1.CreateValue.return">Lazy を初期化しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Lazy`1.CreateValue.return">Lazy 型が初期化されました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib4_plus</ModuleSpecificationId>
+            <TypeName>System.Lazy`1</TypeName>
+            <MethodName>CreateValue</MethodName>
+            <MethodId>System.Lazy`1.CreateValue():System.Lazy`1+Boxed&lt;!0&gt;</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Lazy.Lazy.InitializeDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>lazy</CategoryId>
+        <SettingsName _locID="settingsName.initialized_threadlocal">ThreadLocal を初期化しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ThreadLocal`1.GetValueSlow.return">ThreadLocal 型が初期化されました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib45_plus</ModuleSpecificationId>
+            <TypeName>System.Threading.ThreadLocal`1</TypeName>
+            <MethodName>GetValueSlow</MethodName>
+            <MethodId>System.Threading.ThreadLocal`1.GetValueSlow():!0</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Lazy.ThreadLocal.GetValueSlowDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+    <DiagnosticEventSpecification enabled="false">
+        <CategoryId>lazy</CategoryId>
+        <SettingsName _locID="settingsName.initialized_threadlocal">ThreadLocal を初期化しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ThreadLocal`1.CreateValue.return">ThreadLocal 型が初期化されました。</SettingsDescription>
+        <Bindings>
+            <Binding onReturn="true">
+                <ModuleSpecificationId>mscorlib4_only</ModuleSpecificationId>
+                <TypeName>System.Threading.ThreadLocal`1</TypeName>
+                <MethodName>CreateValue</MethodName>
+                <MethodId>System.Threading.ThreadLocal`1.CreateValue():System.Threading.ThreadLocal`1+Boxed&lt;!0&gt;</MethodId>
+                <ProgrammableDataQuery>
+                    <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+                    <TypeName>Microsoft.VisualStudio.DataQueries.Lazy.ThreadLocal.InitializeDataQuery</TypeName>
+                </ProgrammableDataQuery>
+            </Binding>
+        </Bindings>
+    </DiagnosticEventSpecification>
+        <!-- End Diagnostic Events for Lazy Initialization -->
+      <!-- Begin Diagnostic Events for Registry -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.Dispose">RegistryKey を閉じました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.Dispose">RegistryKey を閉じました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>Dispose</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.Dispose(System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.Dispose">"{0}" を閉じました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.Dispose">レジストリ キー "{0}" を閉じました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.Dispose.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.CreateSubKey">RegKey (String, RegistryKeyPermissionCheck, Object, RegistryOptions) を作成しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.CreateSubKey">RegistryKey を作成しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib4_plus</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>CreateSubKeyInternal</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.CreateSubKeyInternal(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Object,Microsoft.Win32.RegistryOptions):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.CreateSubKeyInternal">"{0}" ({1}) を作成しました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.CreateSubKeyInternal">レジストリ キー "{0}" を "{1}" に作成しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="subkey" _locID="dataquery.RegistryKey.CreateSubKeyInternal.subkey" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.CreateSubKeyInternal.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+          <Binding>
+            <ModuleSpecificationId>mscorlib2_only</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>CreateSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.CreateSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Security.AccessControl.RegistrySecurity):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.CreateSubKey.2">"{0}" ({1}) を作成しました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.CreateSubKey.2">レジストリ キー "{0}" を "{1}" に作成しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="subkey" _locID="dataquery.RegistryKey.CreateSubKey.2.subkey" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.CreateSubKey.2.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.DeleteSubKey">RegKey を削除しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.DeleteSubKey">RegistryKey に対して削除が呼び出されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>DeleteSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.DeleteSubKey(System.String,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.DeleteSubKey">"{0}" キーの削除</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.DeleteSubKey">レジストリ キー "{0}" を削除しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="subkey" _locID="dataquery.RegistryKey.DeleteSubKey.subkey" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.DeleteSubKeyTree">RegKey ツリーを削除しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.DeleteSubKeyTree">RegistryKey のツリーを削除しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>DeleteSubKeyTree</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.DeleteSubKeyTree(System.String,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.DeleteSubKeyTree">"{0}" RegistryKey ツリーを削除しました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.DeleteSubKeyTree">RegistryKey "{0}" のツリーを削除しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="subkey" _locID="dataquery.RegistryKey.DeleteSubKeyTree.subkey" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.DeleteValue.1">値 (String) を削除しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.DeleteValue.1">RegistryKey の値を削除しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>DeleteValue</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.DeleteValue(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.DeleteValue.1">"{0}" 値を削除しました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.DeleteValue.1">キー "{1}" から値 "{0}" を削除しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.DeleteValue.1.name" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.DeleteValue.1.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.DeleteValue.2">値 (String, Boolean) を削除しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.DeleteValue.2">RegistryKey の値を削除しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>DeleteValue</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.DeleteValue(System.String,System.Boolean):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.DeleteValue.2">"{0}" 値を削除しました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.DeleteValue.2">キー "{1}" から値 "{0}" を削除しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.DeleteValue.2.name" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.DeleteValue.2.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.InternalGetValue">値を読み取りました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.InternalGetValue">RegistryKey の値を読み取りました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>InternalGetValue</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.InternalGetValue(System.String,System.Object,System.Boolean,System.Boolean):System.Object</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.InternalGetValue">値 "{0}" を読み取りました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.InternalGetValue">キー "{1}" から値 "{0}" を読み取りました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.InternalGetValue.name" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.InternalGetValue.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.InternalGetValue.return">戻り値の取得</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.InternalGetValue.return">GetValue は RegistryKey から値を返しました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>InternalGetValue</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.InternalGetValue(System.String,System.Object,System.Boolean,System.Boolean):System.Object</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Registry.GetValueDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.OpenSubKey.1">レジストリ キーを開いています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.OpenSubKey.1">RegistryKey を開こうとしています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>OpenSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.OpenSubKey(System.String,System.Boolean):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.OpenSubKey.1">"{0}" を開いています</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.OpenSubKey.1">レジストリ キー "{0}" を開こうとしています。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.OpenSubKey.1.name" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.OpenSubKey.1.return">レジストリ キーが開かれました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.OpenSubKey.1.return">RegistryKey が開かれました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>OpenSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.OpenSubKey(System.String,System.Boolean):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.OpenSubKey.1.return">"{0}" が開かれました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.OpenSubKey.1.return">レジストリ キー "{0}" を開こうとしました。試行に失敗した場合は、null が返されています。どのキーがアクセスされたかを判断するには、このスレッドの前の診断イベントを参照してください。</LongDescription>
+            <DataQueries>
+              <DataQuery index="-1" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.OpenSubKey.1.return.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.InternalOpenSubKey.3">レジストリ キー (PermissionsCheck, RegistryRights) を開きます</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.InternalOpenSubKey.3">RegistryKey を開こうとしています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>InternalOpenSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.InternalOpenSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Int32):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.InternalOpenSubKey.3">"{0}" を開く</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.InternalOpenSubKey.3">レジストリ キー "{0}" を開こうとしています。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.InternalOpenSubKey.3.name" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.InternalOpenSubKey.3.return">レジストリ キー (PermissionsCheck, RegistryRights) を開きました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.InternalOpenSubKey.3.return">RegistryKey が開かれました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>InternalOpenSubKey</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.InternalOpenSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Int32):Microsoft.Win32.RegistryKey</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.InternalOpenSubKey.3.return">"{0}" が開かれました</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.InternalOpenSubKey.3.return">レジストリ キー "{0}" を開こうとしました。試行に失敗した場合は、null が返されています。どのキーがアクセスされたかを判断するには、このスレッドの前の診断イベントを参照してください。</LongDescription>
+            <DataQueries>
+              <DataQuery index="-1" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.InternalOpenSubKey.3.return.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>registry.access</CategoryId>
+        <SettingsName _locID="settingsName.RegistryKey.SetValue">値の設定</SettingsName>
+        <SettingsDescription _locID="settingsDescription.RegistryKey.SetValue">RegistryKey に値を設定します。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>Microsoft.Win32.RegistryKey</TypeName>
+            <MethodName>SetValue</MethodName>
+            <MethodId>Microsoft.Win32.RegistryKey.SetValue(System.String,System.Object,Microsoft.Win32.RegistryValueKind):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.RegistryKey.SetValue">値 "{0}" の設定</ShortDescription>
+            <LongDescription _locID="longDescription.RegistryKey.SetValue">キー "{1}" に値 "{0}" を設定します。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="name" _locID="dataquery.RegistryKey.SetValue.name" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="0" maxSize="256" type="String" name="keyName" _locID="dataquery.RegistryKey.SetValue.keyName" _locAttrData="name" query="keyName">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Registry -->
+      <!-- Begin Diagnostic Events for ServiceModel -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ImmutableClientRuntime.AfterReceiveReply">クライアント MessageInspectors を呼び出しています (返信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ImmutableClientRuntime.AfterReceiveReply">返信の受信時にクライアント MessageInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ImmutableClientRuntime</TypeName>
+            <MethodName>AfterReceiveReply</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ImmutableClientRuntime.AfterReceiveReply(System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ImmutableClientRuntime.AfterReceiveReply">クライアント MessageInspectors を呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ImmutableClientRuntime.AfterReceiveReply">返信の受信時にクライアント MessageInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ImmutableClientRuntime.BeforeSendRequest">クライアント MessageInspectors を呼び出しています (送信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ImmutableClientRuntime.BeforeSendRequest">要求を送信する前にクライアント MessageInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ImmutableClientRuntime</TypeName>
+            <MethodName>BeforeSendRequest</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ImmutableClientRuntime.BeforeSendRequest(System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ImmutableClientRuntime.BeforeSendRequest">クライアント MessageInspectors を呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ImmutableClientRuntime.BeforeSendRequest">要求を送信する前にクライアント MessageInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ServiceChannel.HandleReply">クライアントが返信を受信しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ServiceChannel.HandleReply">クライアントがサービスから返信を受信します。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Channels.ServiceChannel</TypeName>
+            <MethodName>HandleReply</MethodName>
+            <MethodId>System.ServiceModel.Channels.ServiceChannel.HandleReply(System.ServiceModel.Dispatcher.ProxyOperationRuntime,System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ServiceChannel.HandleReply">クライアントが返信を受信しました</ShortDescription>
+            <LongDescription _locID="longDescription.ServiceChannel.HandleReply">クライアントがサービスから返信を受信しました。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ServiceChannel.PrepareCall">クライアント呼び出しを準備しています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ServiceChannel.PrepareCall">クライアント呼び出しを準備しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Channels.ServiceChannel</TypeName>
+            <MethodName>PrepareCall</MethodName>
+            <MethodId>System.ServiceModel.Channels.ServiceChannel.PrepareCall(System.ServiceModel.Dispatcher.ProxyOperationRuntime,System.Boolean,System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ServiceChannel.PrepareCall">クライアント呼び出しを準備しています</ShortDescription>
+            <LongDescription _locID="longDescription.ServiceChannel.PrepareCall">クライアント呼び出しを準備しました。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ProxyOperationRuntime.AfterReply">クライアント ParameterInspectors を呼び出しています (返信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ProxyOperationRuntime.AfterReply">返信メッセージの受信時に呼び出されたクライアント ParameterInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ProxyOperationRuntime</TypeName>
+            <MethodName>AfterReply</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ProxyOperationRuntime.AfterReply(System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ProxyOperationRuntime.AfterReply">クライアント ParameterInspectors を呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ProxyOperationRuntime.AfterReply">返信メッセージの受信時に呼び出されたクライアント ParameterInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ProxyOperationRuntime.BeforeRequest">クライアント ParameterInspectors を呼び出しています (送信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ProxyOperationRuntime.BeforeRequest">要求を送信する前に呼び出されたクライアント ParameterInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ProxyOperationRuntime</TypeName>
+            <MethodName>BeforeRequest</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ProxyOperationRuntime.BeforeRequest(System.ServiceModel.Dispatcher.ProxyRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ProxyOperationRuntime.BeforeRequest">クライアント ParameterInspectors を呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ProxyOperationRuntime.BeforeRequest">要求を送信する前に呼び出されたクライアント ParameterInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ErrorBehavior.HandleErrorCommon">サービス エラーが発生しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ErrorBehavior.HandleErrorCommon">サービス内でハンドルされない例外。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ErrorBehavior</TypeName>
+            <MethodName>HandleErrorCommon</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ErrorBehavior.HandleErrorCommon(System.Exception,System.ServiceModel.Dispatcher.ErrorHandlerFaultInfo&amp;):System.Boolean</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.ServiceModel.Dispatcher.HandleErrorCommonDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ErrorBehavior.ProvideFault">フォールト プロバイダーを呼び出しました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ErrorBehavior.ProvideFault">FaultProviders を呼び出しました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ErrorBehavior</TypeName>
+            <MethodName>ProvideFault</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ErrorBehavior.ProvideFault(System.Exception,System.ServiceModel.Channels.FaultConverter,System.ServiceModel.Dispatcher.ErrorHandlerFaultInfo&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ErrorBehavior.ProvideFault">フォールト プロバイダーを呼び出しました</ShortDescription>
+            <LongDescription _locID="longDescription.ErrorBehavior.ProvideFault">FaultProviders を呼び出しました。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ImmutableDispatchRuntime.AfterReceiveRequestCore">メッセージ インスペクターを呼び出しています (受信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ImmutableDispatchRuntime.AfterReceiveRequestCore">要求の受信時に MessageInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ImmutableDispatchRuntime</TypeName>
+            <MethodName>AfterReceiveRequestCore</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.AfterReceiveRequestCore(System.ServiceModel.Dispatcher.MessageRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ImmutableDispatchRuntime.AfterReceiveRequestCore">メッセージ インスペクターを呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ImmutableDispatchRuntime.AfterReceiveRequestCore">要求の受信時に MessageInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ImmutableDispatchRuntime.BeforeSendReplyCore">メッセージ インスペクターを呼び出しています (送信時)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ImmutableDispatchRuntime.BeforeSendReplyCore">応答の送信時に MessageInspectors を呼び出しています。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.ImmutableDispatchRuntime</TypeName>
+            <MethodName>BeforeSendReplyCore</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.BeforeSendReplyCore(System.ServiceModel.Dispatcher.MessageRpc&amp;,System.Exception&amp;,System.Boolean&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.ImmutableDispatchRuntime.BeforeSendReplyCore">メッセージ インスペクターを呼び出しています</ShortDescription>
+            <LongDescription _locID="longDescription.ImmutableDispatchRuntime.BeforeSendReplyCore">応答の送信時に MessageInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.DispatchOperationRuntime.InspectOutputsCore">ParameterInspectors が出力を調べています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DispatchOperationRuntime.InspectOutputsCore">操作の呼び出し後に ParameterInspectors が呼び出されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.DispatchOperationRuntime</TypeName>
+            <MethodName>InspectOutputsCore</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.DispatchOperationRuntime.InspectOutputsCore(System.ServiceModel.Dispatcher.MessageRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.DispatchOperationRuntime.InspectOutputsCore">ParameterInspectors が出力を調べています</ShortDescription>
+            <LongDescription _locID="longDescription.DispatchOperationRuntime.InspectOutputsCore">操作の呼び出し後に ParameterInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.DispatchOperationRuntime.InspectInputsCore">ParameterInspectors が入力を調べています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.DispatchOperationRuntime.InspectInputsCore">操作の呼び出し前に ParameterInspectors が呼び出されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.DispatchOperationRuntime</TypeName>
+            <MethodName>InspectInputsCore</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.DispatchOperationRuntime.InspectInputsCore(System.ServiceModel.Dispatcher.MessageRpc&amp;):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.DispatchOperationRuntime.InspectInputsCore">ParameterInspectors が入力を調べています</ShortDescription>
+            <LongDescription _locID="longDescription.DispatchOperationRuntime.InspectInputsCore">操作の呼び出し前に ParameterInspectors を呼び出しています。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.ServiceHost.CreateDescription">サービス ホストを開始しています</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ServiceHost.CreateDescription">ServiceHost を開始します。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.ServiceHost</TypeName>
+            <MethodName>CreateDescription</MethodName>
+            <MethodId>System.ServiceModel.ServiceHost.CreateDescription(System.Collections.Generic.IDictionary`2&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;&amp;):System.ServiceModel.Description.ServiceDescription</MethodId>
+            <ShortDescription _locID="shortDescription.ServiceHost.CreateDescription">サービス ホストを開始しています</ShortDescription>
+            <LongDescription _locID="longDescription.ServiceHost.CreateDescription">ServiceHost を開始します。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>servicemodel</CategoryId>
+        <SettingsName _locID="settingsName.SyncMethodInvoker.Invoke">操作が呼び出されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.SyncMethodInvoker.Invoke">操作が同期的に呼び出されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+            <TypeName>System.ServiceModel.Dispatcher.SyncMethodInvoker</TypeName>
+            <MethodName>Invoke</MethodName>
+            <MethodId>System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(System.Object,System.Object[],System.Object[]&amp;):System.Object</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.ServiceModel.Dispatcher.SyncMethodInvokerDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for ServiceModel -->
+      <!-- Begin Diagnostic Events for Threading -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>threading</CategoryId>
+        <SettingsName _locID="settingsName.ThreadPool.QueueUserWorkItemHelper">キューに置かれたユーザー作業項目</SettingsName>
+        <SettingsDescription _locID="settingsDescription.ThreadPool.QueueUserWorkItemHelper">スレッド プールのキューにユーザー作業項目を入れようとしました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib</ModuleSpecificationId>
+            <TypeName>System.Threading.ThreadPool</TypeName>
+            <MethodName>QueueUserWorkItemHelper</MethodName>
+            <MethodId>System.Threading.ThreadPool.QueueUserWorkItemHelper(System.Threading.WaitCallback,System.Object,System.Threading.StackCrawlMark&amp;,System.Boolean):System.Boolean</MethodId>
+            <ShortDescription _locID="shortDescription.ThreadPool.QueueUserWorkItemHelper">キューに置かれたユーザー作業項目</ShortDescription>
+            <LongDescription _locID="longDescription.ThreadPool.QueueUserWorkItemHelper">スレッド プールのキューにユーザー作業項目を入れようとしました。</LongDescription>
+            <DataQueries>
+</DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>threading</CategoryId>
+        <SettingsName _locID="settingsName.Task.ScheduleAndStart">タスクの開始</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Task.ScheduleAndStart">タスクがスケジューラのキューに入れられました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib4_plus</ModuleSpecificationId>
+            <TypeName>System.Threading.Tasks.Task</TypeName>
+            <MethodName>ScheduleAndStart</MethodName>
+            <MethodId>System.Threading.Tasks.Task.ScheduleAndStart(System.Boolean):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Threading.Task.ScheduleAndStartDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>threading</CategoryId>
+        <SettingsName _locID="settingsName.Task.Wait">タスクの待機</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Task.Wait">タスクが待機されていたか、タスクの結果がアクセスされました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>mscorlib4_plus</ModuleSpecificationId>
+            <TypeName>System.Threading.Tasks.Task</TypeName>
+            <MethodName>Wait</MethodName>
+            <MethodId>System.Threading.Tasks.Task.Wait(System.Int32,System.Threading.CancellationToken):System.Boolean</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Threading.Task.WaitDataQuery</TypeName>
+            </ProgrammableDataQuery>
+        </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Threading -->
+      <!-- Begin Diagnostic Events for Tracing -->
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Fail.1">Assertion (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Fail.1">アプリケーションがメッセージと共にアサーションをスローしました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Fail</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Fail(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.Fail.1">"{0}" のアサート</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.Fail.1">メッセージ "{0}" と共にアサーションが発生しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.Fail.1.Message" _locAttrData="name" name="Message" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Fail.2">Assertion (String, String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Fail.2">アプリケーションがメッセージおよび詳細メッセージと共にアサーションをスローしました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Fail</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Fail(System.String,System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.Fail.2">"{0}" のアサート</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.Fail.2">メッセージ "{0}" および詳細メッセージ "{1}" と共にアサーションが発生しました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.Fail.Message" _locAttrData="name" name="Message" query="">
+</DataQuery>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.TraceInternal.Fail.DetailMessage" _locAttrData="name" name="詳細メッセージ" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Write.1">Trace Write (Object)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Write.1">オブジェクトが渡された Trace Write 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Write</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Write(System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceInternal.TraceWriteDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Write.2">Trace Write (Object, String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Write.2">オブジェクトおよび文字列カテゴリが渡された Trace Write 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Write</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Write(System.Object,System.String):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceInternal.TraceWriteDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Write.3">Trace Write (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Write.3">メッセージ文字列が渡された Trace Write 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Write</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Write(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.Write.3">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.Write.3">メッセージ "{0}" での Trace Write。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.Write.3.message" _locAttrData="name" name="message" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.Write.4">Trace Write (String, String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.Write.4">メッセージおよびカテゴリ文字列が渡された Trace Write 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>Write</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.Write(System.String,System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.Write.4">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.Write.4">カテゴリ "{1}" からの Trace Write: メッセージ "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.Write.4.message" _locAttrData="name" name="message" query="">
+</DataQuery>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.TraceInternal.Write.4.category" _locAttrData="name" name="category" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.WriteLine.1">Trace WriteLine (Object)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.WriteLine.1">オブジェクトが渡された Trace WriteLine 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.WriteLine(System.Object):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceInternal.TraceWriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.WriteLine.2">Trace WriteLine (Object, String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.WriteLine.2">オブジェクトと文字列カテゴリが渡された Trace WriteLine 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.WriteLine(System.Object,System.String):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceInternal.TraceWriteLineDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.WriteLine.3">Trace WriteLine (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.WriteLine.3">メッセージが渡された Trace WriteLine 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.WriteLine(System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.WriteLine.3">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.WriteLine.3">メッセージ "{0}" での Trace WriteLine。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.WriteLine.3.message" _locAttrData="name" name="message" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification enabled="false">
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.TraceInternal.WriteLine.4">Trace WriteLine (String, String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.TraceInternal.WriteLine.4">メッセージとカテゴリ文字列が渡された Trace WriteLine 出力。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.TraceInternal</TypeName>
+            <MethodName>WriteLine</MethodName>
+            <MethodId>System.Diagnostics.TraceInternal.WriteLine(System.String,System.String):System.Void</MethodId>
+            <ShortDescription _locID="shortDescription.TraceInternal.WriteLine.4">"{0}"</ShortDescription>
+            <LongDescription _locID="longDescription.TraceInternal.WriteLine.4">カテゴリ "{1}" からの Trace WriteLine: メッセージ "{0}"。</LongDescription>
+            <DataQueries>
+              <DataQuery index="0" maxSize="256" type="String" _locID="dataquery.TraceInternal.WriteLine.4.message" _locAttrData="name" name="message" query="">
+</DataQuery>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.TraceInternal.WriteLine.4.category" _locAttrData="name" name="category" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceError.1">TraceError (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceError.1">書式設定のない TraceError が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceError</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceError(System.String):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceErrorNoFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceWarning.1">TraceWarning (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceWarning.1">書式設定のない TraceWarning が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceWarning</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceWarning(System.String):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceWarningNoFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceInformation.1">TraceInformation (String)</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceInformation.1">書式設定のない TraceInformation が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceInformation</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceInformation(System.String):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceInformationNoFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceError.2">TraceError (String, Object[])</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceError.2">書式設定のある TraceError が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceError</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceError(System.String,System.Object[]):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceErrorFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceWarning.2">TraceWarning (String, Object[])</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceWarning.2">書式設定のある TraceWarning が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceWarning</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceWarning(System.String,System.Object[]):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceWarningFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>tracing</CategoryId>
+        <SettingsName _locID="settingsName.Trace.TraceInformation.2">TraceInformation (String, Object[])</SettingsName>
+        <SettingsDescription _locID="settingsDescription.Trace.TraceInformation.2">書式設定のある TraceInformation が記録されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>system</ModuleSpecificationId>
+            <TypeName>System.Diagnostics.Trace</TypeName>
+            <MethodName>TraceInformation</MethodName>
+            <MethodId>System.Diagnostics.Trace.TraceInformation(System.String,System.Object[]):System.Void</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Tracing.TraceEvent.TraceInformationFormatDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for Tracing -->
+      <!-- Begin Diagnostic Events for User Prompt -->
+      <DiagnosticEventSpecification>
+        <CategoryId>user.prompt</CategoryId>
+        <SettingsName _locID="settingsName.MessageBox.ShowCore.1">Windows Forms: MessageBox が表示されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MessageBox.ShowCore.1">Windows フォーム アプリケーションの MessageBox が表示されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.MessageBox</TypeName>
+            <MethodName>ShowCore</MethodName>
+            <MethodId>System.Windows.Forms.MessageBox.ShowCore(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.Boolean):System.Windows.Forms.DialogResult</MethodId>
+            <ShortDescription _locID="shortDescription.MessageBox.ShowCore.1">"{1}" を表示しました (MessageBox)</ShortDescription>
+            <LongDescription _locID="longDescription.MessageBox.ShowCore.1">MessageBox にテキスト "{0}" とキャプション "{1}" が表示されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" _locID="dataquery.MessageBox.ShowCore.1.text" _locAttrData="name" name="text" query="">
+</DataQuery>
+              <DataQuery index="2" maxSize="256" type="String" _locID="dataquery.MessageBox.ShowCore.1.caption" _locAttrData="name" name="caption" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>user.prompt</CategoryId>
+        <SettingsName _locID="settingsName.MessageBox.ShowCore.1.return">Windows Forms: MessageBox DialogResult が返されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MessageBox.ShowCore.1.return">Windows フォーム アプリケーションの MessageBox が DialogResult を返しました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>winforms</ModuleSpecificationId>
+            <TypeName>System.Windows.Forms.MessageBox</TypeName>
+            <MethodName>ShowCore</MethodName>
+            <MethodId>System.Windows.Forms.MessageBox.ShowCore(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.Boolean):System.Windows.Forms.DialogResult</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.Winforms.MessageBox.ShowCoreDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>user.prompt</CategoryId>
+        <SettingsName _locID="settingsName.MessageBox.ShowCore.2">WPF: MessageBox が表示されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MessageBox.ShowCore.2">WPF アプリケーションの MessageBox が表示されました。</SettingsDescription>
+        <Bindings>
+          <Binding>
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.MessageBox</TypeName>
+            <MethodName>ShowCore</MethodName>
+            <MethodId>System.Windows.MessageBox.ShowCore(System.IntPtr,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions):System.Windows.MessageBoxResult</MethodId>
+            <ShortDescription _locID="shortDescription.MessageBox.ShowCore.2">"{1}" を表示しました (MessageBox)</ShortDescription>
+            <LongDescription _locID="longDescription.MessageBox.ShowCore.2">MessageBox にテキスト "{0}" とキャプション "{1}" が表示されました。</LongDescription>
+            <DataQueries>
+              <DataQuery index="1" maxSize="256" type="String" name="text" _locID="dataquery.MessageBox.ShowCore.2.text" _locAttrData="name" query="">
+</DataQuery>
+              <DataQuery index="2" maxSize="256" type="String" name="caption" _locID="dataquery.MessageBox.ShowCore.2.caption" _locAttrData="name" query="">
+</DataQuery>
+            </DataQueries>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <DiagnosticEventSpecification>
+        <CategoryId>user.prompt</CategoryId>
+        <SettingsName _locID="settingsName.MessageBox.ShowCore.2.return">WPF: MessageBox MessageBoxResult が返されました</SettingsName>
+        <SettingsDescription _locID="settingsDescription.MessageBox.ShowCore.2.return">WPF アプリケーションの MessageBox が MessageBoxResult を返しました。</SettingsDescription>
+        <Bindings>
+          <Binding onReturn="true">
+            <ModuleSpecificationId>presentationframework</ModuleSpecificationId>
+            <TypeName>System.Windows.MessageBox</TypeName>
+            <MethodName>ShowCore</MethodName>
+            <MethodId>System.Windows.MessageBox.ShowCore(System.IntPtr,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions):System.Windows.MessageBoxResult</MethodId>
+            <ProgrammableDataQuery>
+              <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+              <TypeName>Microsoft.VisualStudio.DataQueries.WPF.MessageBox.ShowCoreDataQuery</TypeName>
+            </ProgrammableDataQuery>
+          </Binding>
+        </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for User Prompt -->
+      <!-- Begin Diagnostic Events for XML -->
+      <DiagnosticEventSpecification enabled="false">
+          <CategoryId>xml</CategoryId>
+          <SettingsName _locID="settingsName.XmlDocument.Load">XMLDocument を読み込んでいます</SettingsName>
+          <SettingsDescription _locID="settingsDescription.XmlDocument.Load">XMLDocument がファイルから読み込まれました。</SettingsDescription>
+          <Bindings>
+              <Binding>
+                  <ModuleSpecificationId>system.xml</ModuleSpecificationId>
+                  <TypeName>System.Xml.XmlDocument</TypeName>
+                  <MethodName>Load</MethodName>
+                  <MethodId>System.Xml.XmlDocument.Load(System.Xml.XmlReader):System.Void</MethodId>
+                  <ProgrammableDataQuery>
+                      <ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+                      <TypeName>Microsoft.VisualStudio.DataQueries.Xml.XmlDocumentLoadDataQuery</TypeName>
+                  </ProgrammableDataQuery>
+              </Binding>
+          </Bindings>
+      </DiagnosticEventSpecification>
+      <!-- End Diagnostic Events for XML -->
+    <DiagnosticEventSpecification>
+<CategoryId>servicemodel</CategoryId>
+<SettingsName _locID="settingsName.AsyncMethodInvoker.InvokeEnd">操作が非同期的に完了しました</SettingsName>
+<SettingsDescription _locID="settingsDescription.AsyncMethodInvoker.InvokeEnd">操作が非同期的に完了します。</SettingsDescription>
+<Bindings>
+<Binding>
+<ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+<TypeName>System.ServiceModel.Dispatcher.AsyncMethodInvoker</TypeName>
+<MethodName>InvokeEnd</MethodName>
+<MethodId>System.ServiceModel.Dispatcher.AsyncMethodInvoker.InvokeEnd(System.Object,System.Object[]&amp;,System.IAsyncResult):System.Object</MethodId>
+<ShortDescription _locID="shortDescription.AsyncMethodInvoker.InvokeEnd">操作が非同期的に完了しました</ShortDescription>
+<LongDescription _locID="longDescription.AsyncMethodInvoker.InvokeEnd">操作が非同期的に完了しました。</LongDescription>
+<DataQueries>
+</DataQueries>
+</Binding>
+</Bindings>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="false">
+<CategoryId>servicemodel</CategoryId>
+<SettingsName _locID="settingsName.AsyncMethodInvoker.InvokeBegin">操作が非同期的に呼び出されました</SettingsName>
+<SettingsDescription _locID="settingsDescription.AsyncMethodInvoker.InvokeBegin">操作が非同期的に呼び出されました。</SettingsDescription>
+<Bindings>
+<Binding>
+<ModuleSpecificationId>system.servicemodel</ModuleSpecificationId>
+<TypeName>System.ServiceModel.Dispatcher.AsyncMethodInvoker</TypeName>
+<MethodName>InvokeBegin</MethodName>
+<MethodId>System.ServiceModel.Dispatcher.AsyncMethodInvoker.InvokeBegin(System.Object,System.Object[],System.AsyncCallback,System.Object):System.IAsyncResult</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.ServiceModel.Dispatcher.AsyncMethodInvokerDataQuery</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.SharePoint</ModuleSpecificationId>
+<TypeName>Microsoft.SharePoint.Diagnostics.ULS</TypeName>
+<MethodName>CorrelationAdd</MethodName>
+<MethodId>Microsoft.SharePoint.Diagnostics.ULS.CorrelationAdd(System.String,System.String):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.CorrelationWriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.uls</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.uls.Correlation">SharePoint ULS イベント (相関)</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.uls.Correlation">Sharepoint Universal Logging System Correlation イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.Office.Server</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.Diagnostics.ULS</TypeName>
+<MethodName>CorrelationAdd</MethodName>
+<MethodId>Microsoft.Office.Server.Diagnostics.ULS.CorrelationAdd(System.String,System.String):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.MOSSCorrelationWriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.uls</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.uls.OfficeServerCorrelation">SharePoint ULS イベント (Office Server 相関)</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.uls.OfficeServerCorrelation">SharePoint Universal Logging System Diagnostics for Office Server Correlation イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.SharePoint</ModuleSpecificationId>
+<TypeName>Microsoft.SharePoint.Diagnostics.ULS</TypeName>
+<MethodName>SendTraceImpl</MethodName>
+<MethodId>Microsoft.SharePoint.Diagnostics.ULS.SendTraceImpl(System.UInt32,Microsoft.SharePoint.Diagnostics.ULSCatBase,Microsoft.SharePoint.Diagnostics.ULSTraceLevel,System.String,System.Object[]):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.WriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.uls</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.uls.Basic">SharePoint ULS イベント (基本)</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.uls.Basic">Sharepoint Universal Logging System 診断イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.SharePoint</ModuleSpecificationId>
+<TypeName>Microsoft.SharePoint.Administration.SPDiagnosticsServiceBase</TypeName>
+<MethodName>WriteTrace</MethodName>
+<MethodId>Microsoft.SharePoint.Administration.SPDiagnosticsServiceBase.WriteTrace(System.UInt32,Microsoft.SharePoint.Administration.SPDiagnosticsCategory,Microsoft.SharePoint.Administration.TraceSeverity,System.String,System.Object[]):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.WriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.SharePoint</ModuleSpecificationId>
+<TypeName>Microsoft.SharePoint.Administration.SPDiagnosticsServiceBase</TypeName>
+<MethodName>WriteEvent</MethodName>
+<MethodId>Microsoft.SharePoint.Administration.SPDiagnosticsServiceBase.WriteEvent(System.UInt16,Microsoft.SharePoint.Administration.SPDiagnosticsCategory,Microsoft.SharePoint.Administration.EventSeverity,System.String,System.Object[]):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.WriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.uls</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.uls.Administration">SharePoint ULS イベント (管理)</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.uls.Administration">SharePoint Universal Logging System 管理イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.Office.Server</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.Diagnostics.ULS</TypeName>
+<MethodName>SendTraceImpl</MethodName>
+<MethodId>Microsoft.Office.Server.Diagnostics.ULS.SendTraceImpl(System.UInt32,Microsoft.Office.Server.Diagnostics.ULSCatBase,Microsoft.Office.Server.Diagnostics.ULSTraceLevel,System.String,System.Object[]):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.ULS.MOSSWriteTrace</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.uls</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.uls.OfficeServer">SharePoint ULS イベント (Office Server 診断)</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.uls.OfficeServer">SharePoint Universal Logging System Office Server 用診断イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.Office.Server.UserProfiles</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.UserProfiles.UserProfile</TypeName>
+<MethodName>Load</MethodName>
+<MethodId>Microsoft.Office.Server.UserProfiles.UserProfile.Load(Microsoft.Office.Server.UserProfiles.Cache.UserData):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.UserProfiles.LoadCachedUserProfile</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.userprofile</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.OfficeServer.userProfiles.Cached">Cached User Profile Loaded</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.OfficeServer.userProfiles.Cached">Office Server の Cached User Profile Loaded イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding onReturn="true">
+<ModuleSpecificationId>Microsoft.Office.Server.UserProfiles</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.UserProfiles.UserProfile</TypeName>
+<MethodName>Load</MethodName>
+<MethodId>Microsoft.Office.Server.UserProfiles.UserProfile.Load(System.Data.SqlClient.SqlDataReader,System.Boolean,System.Boolean,System.Boolean):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.UserProfiles.LoadUserProfile</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.userprofile</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.OfficeServer.userProfiles.Profile">User Profile Loaded</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.OfficeServer.userProfiles.Profile">Office Server の User Profile Loaded イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="false">
+<Bindings>
+<Binding includeActivityId="true">
+<ModuleSpecificationId>Microsoft.Office.Server.UserProfiles</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.UserProfiles.ProfileUpdateWrapperBase</TypeName>
+<MethodName>AddProperty</MethodName>
+<MethodId>Microsoft.Office.Server.UserProfiles.ProfileUpdateWrapperBase.AddProperty(Microsoft.Office.Server.UserProfiles.ProfileValueCollectionBase,Microsoft.Office.Server.UserProfiles.Privacy):System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.UserProfiles.UserProfilePropertyValueChangeSet</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.userprofile</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.OfficeServer.userProfiles.PropertyChanged">User Profile Property Changed</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.OfficeServer.userProfiles.PropertyChanged">Office Server の User Profile Property Changed イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="false">
+<Bindings>
+<Binding onReturn="true" includeActivityId="true">
+<ModuleSpecificationId>Microsoft.Office.Server.UserProfiles</ModuleSpecificationId>
+<TypeName>Microsoft.Office.Server.UserProfiles.ProfileValueCollectionBase</TypeName>
+<MethodName>get_Value</MethodName>
+<MethodId>Microsoft.Office.Server.UserProfiles.ProfileValueCollectionBase.get_Value():System.Object</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.SharePoint.UserProfiles.UserProfilePropertyValueChangeGet</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>sharepoint.userprofile</CategoryId>
+<SettingsName _locID="settingsName.sharepoint.OfficeServer.userProfiles.PropertyRead">User Profile Property Read</SettingsName>
+<SettingsDescription _locID="settingsDescription.sharepoint.OfficeServer.userProfiles.PropertyRead">Office Server の User Profile Property Read イベント</SettingsDescription>
+</DiagnosticEventSpecification>
+<DiagnosticEventSpecification enabled="true">
+<Bindings>
+<Binding includeActivityId="true">
+<ModuleSpecificationId>system.web</ModuleSpecificationId>
+<TypeName>System.Web.HttpApplication</TypeName>
+<MethodName>RaiseOnError</MethodName>
+<MethodId>System.Web.HttpApplication.RaiseOnError():System.Void</MethodId>
+<ProgrammableDataQuery>
+<ModuleName>Microsoft.VisualStudio.DefaultDataQueries.dll</ModuleName>
+<TypeName>Microsoft.VisualStudio.DataQueries.ASPNet.GlobalExceptionHandler</TypeName>
+</ProgrammableDataQuery>
+</Binding>
+</Bindings>
+<CategoryId>system.web</CategoryId>
+<SettingsName _locID="settingsName.GlobalErrorHandler">グローバル エラー ハンドラー</SettingsName>
+<SettingsDescription _locID="settingsDescription.GlobalErrorHandler">ASP.NET グローバル エラー ハンドラーが、ハンドルされていない例外に応答しました。</SettingsDescription>
+</DiagnosticEventSpecification>
+</DiagnosticEventSpecifications>
+  </TracePointProvider>
+</CollectionPlan>
