@@ -157,9 +157,6 @@
   <ItemGroup>
     <Resource Include="Intellitrace.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ToDos.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /y  /E /R /C "$(SolutionDir)IntelliTraceDataCollector\ThirdParty" "$(TargetDir)"</PostBuildEvent>
