@@ -10,7 +10,7 @@ IntelliTrace in not only meant for use during debugging sessions within Visual S
 
 Channel 9 video [here](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Collecting-IntelliTrace-Data-in-Production) provides an excellent introduction to using  IntelliTrace for Production environment. 
 
-##What do I need IntelliTrace Data Collector
+##What problem IntelliTrace Data Collector solves?
 IntelliTrace could be used against different types of applications such as Desktop (Winform/WPF) Applications, Web Applications and Windows Services. The IntelliTrace logs collection of each of this type of application requires different steps. For example, for Winform/WPF application, it requires to launch target application using IntelliTrace Standalone Collector executable (called IntelliTraceSC.exe) with appropriate command line arguments and switches. Whereas for a Web Application, it uses PowerShell cmdlets to do the job. For case of a Windows Service, registry settings for target Windows Service need to be edited with appropriate values. You can find details of these steps at following links.
 
 1. [Desktop and Web Applications](https://msdn.microsoft.com/en-us/library/hh398365.aspx)
