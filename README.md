@@ -18,6 +18,11 @@ IntelliTrace could be used against different types of applications such as Deskt
 
 The idea behind IntelliTrace Data Collector is to simplify the process of data collection from a Production environment through a user intuitive  UI.
 
+##How to use IntelliTrace Data Collector
+
+![ui1](https://cloud.githubusercontent.com/assets/20288690/17080824/d629f506-510c-11e6-8017-3824c957c228.png)
+
+
 ##Configuring a Collection Plan
 In order to config a collection plan, I used IntelliTraceCPConfig tool by Vlatko Ivanovski published at [codeplex](https://intellitracecpconfig.codeplex.com/). I just had to make couple of minor modifications in this tool to accept a collection plan as an argument. 
 
