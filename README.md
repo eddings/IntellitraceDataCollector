@@ -1,5 +1,7 @@
 # IntelliTrace Data Collector
 
+  ![ui1](https://cloud.githubusercontent.com/assets/20288690/17080824/d629f506-510c-11e6-8017-3824c957c228.png)
+
 ##What is IntelliTrace<sup>:copyright:</sup>
 IntelliTrace is a Visual studio feature that enables historical debugging of your application. When enabled, IntelliTrace records interesting events and method calls flow for your application. These interesting events and methods are configured via something called Collection Plans. This recorded information can then be played forward/back later on-demand that greatly simplifies the debugging process.  
 
@@ -20,7 +22,23 @@ The idea behind IntelliTrace Data Collector is to simplify the process of data c
 
 ##How to use IntelliTrace Data Collector
 
-![ui1](https://cloud.githubusercontent.com/assets/20288690/17080824/d629f506-510c-11e6-8017-3824c957c228.png)
+There are three required inputs for IntelliTrace Data Collector to collect trace logs as shown in figure below.  
+  
+1.	Target application  
+2.	Output location where IntelliTrace logs should be collected.   
+3.	Collection Plan   
+
+![ui2](https://cloud.githubusercontent.com/assets/20288690/17087395/c27c9c78-51d6-11e6-84ca-464ffc985d11.png)
+
+In order to perform data collection for a Web Application, Web option should be selected. This will enable the dropdown next to it and will display all the Application Pools from target IIS as shown below.
+
+![ui3](https://cloud.githubusercontent.com/assets/20288690/17087403/ec1dd042-51d6-11e6-9cc9-1703d6c84fed.png)
+
+If there is a specific application pool that you are interested in, you can configure that app pool name in the configuration file as shown below. This way, you will only see the pool name that is of interest to you.
+
+![ui4](https://cloud.githubusercontent.com/assets/20288690/17087406/efc0b23c-51d6-11e6-8fda-10995ebfa0ba.png)
+
+
 
 
 ##Configuring a Collection Plan
