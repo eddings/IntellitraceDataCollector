@@ -34,7 +34,20 @@ In order to perform data collection for a Web Application, Web option should be 
 
 ![ui3](https://cloud.githubusercontent.com/assets/20288690/17087403/ec1dd042-51d6-11e6-9cc9-1703d6c84fed.png)
 
-If there is a specific application pool that you are interested in, you can configure that app pool name in the configuration file as shown below. This way, you will only see the pool name that is of interest to you.
+If there is a specific application pool that your web site uses and you are not interested in all list of application pools shown in drop down, you can configure it in the IntelliTraceDataCollector.exe.config file. For example, if you have a app pool named DefaultAppPool that you want to dispaly in drop down, update IntelliTraceDataCollector.exe.config as follows.
+
+```
+<configuration>
+  <configSections>
+    <section name="AppPoolsSection" type="IntelliTraceDataCollector.AppPoolConfigurationSection, IntelliTraceDataCollector"/>
+  </configSections>
+  <AppPoolsSection>
+    <AppPools>
+      <add Name="DefaultAppPool" />
+    </AppPools>
+  </AppPoolsSection>
+</configuration>
+```
 
 ![ui4](https://cloud.githubusercontent.com/assets/20288690/17087406/efc0b23c-51d6-11e6-8fda-10995ebfa0ba.png)
 
