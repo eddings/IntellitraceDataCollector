@@ -10,7 +10,7 @@ using System.Management;
 using System.Diagnostics;
 using System.ComponentModel;
 using System.Configuration;
-
+using Microsoft.Win32;
 
 namespace IntelliTraceDataCollector
 {
@@ -165,6 +165,11 @@ namespace IntelliTraceDataCollector
             }
 
             return appPools;
+        }
+
+        internal static bool IsIISInstalled()
+        {
+            return (Registry.LocalMachine.OpenSubKey(@"Software\Microsoft\InetStp\MajorVersion") != null);
         }
     }
 }

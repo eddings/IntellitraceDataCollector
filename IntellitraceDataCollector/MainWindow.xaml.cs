@@ -301,13 +301,16 @@ namespace IntelliTraceDataCollector
                 services = Utils.GetAllServices();
             this.cbService.ItemsSource = services;
 
-            List<string> appPools = null;
-            if (Utils.HasSelectedAppPoolsForCollection())
-                appPools = Utils.GetSelectedAppPools();
-            else
-                appPools = Utils.GetListOfAppPools();
-            
-            this.cbAppPools.ItemsSource = appPools;
+            if (Utils.IsIISInstalled())
+            {
+                List<string> appPools = null;
+                if (Utils.HasSelectedAppPoolsForCollection())
+                    appPools = Utils.GetSelectedAppPools();
+                else
+                    appPools = Utils.GetListOfAppPools();
+
+                this.cbAppPools.ItemsSource = appPools;
+            }
 
             string intellitraceCollectorPath = string.Format(@"{0}\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), Constants.IntelliTraceSoftwareLocation);
             List<string> collectionPlanFiles = Directory.GetFiles(intellitraceCollectorPath, "*.xml").Select(x => Path.GetFileName(x)).ToList();
