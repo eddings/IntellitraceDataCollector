@@ -49,7 +49,7 @@ If there is a specific application pool that your web site uses and you are not 
 </configuration>
 ```
 
-![ui4](https://cloud.githubusercontent.com/assets/20288690/17087406/efc0b23c-51d6-11e6-8fda-10995ebfa0ba.png)
+![ui4](https://cloud.githubusercontent.com/assets/20288690/18232839/5e344888-72a6-11e6-92f3-6e41496355b7.png)
 
 
 
