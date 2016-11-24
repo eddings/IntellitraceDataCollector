@@ -68,7 +68,7 @@ namespace IntelliTraceDataCollector
                     PowerShellInstance.Runspace = runspace;
                     PowerShellInstance.Commands.AddCommand(@"Stop-IntelliTraceCollection");
                     PowerShellInstance.Commands.AddParameter("Confirm", false);
-                    PowerShellInstance.Commands.AddParameter("ApplicationPool", "MWPool");
+                    PowerShellInstance.Commands.AddParameter("ApplicationPool", this.AppPoolName);
 
                     var results = PowerShellInstance.Invoke();
                 }

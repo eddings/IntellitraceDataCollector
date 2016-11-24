@@ -169,7 +169,7 @@ namespace IntelliTraceDataCollector
 
         internal static bool IsIISInstalled()
         {
-            return (Registry.LocalMachine.OpenSubKey(@"Software\Microsoft\InetStp\MajorVersion") != null);
+            return (Registry.LocalMachine.OpenSubKey(@"Software\Microsoft\InetStp") != null);
         }
     }
 }
